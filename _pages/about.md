@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+I am Kalani Cabral-Omana, I am a junior in Del Norte High School. I like to surf, play soccer and hang out with friends in my free time.
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+Follow me on GitHub: https://github.com/kcabralomana
