@@ -9,6 +9,8 @@ show_tags: true
 comments: true
 ---
 
+
+
 ![]({{site.baseurl}}/images/alohas sticks.png "https://github.com/fastai/fastpages")
 
 This is a photo of sticks that I tied up and arranged to spell out "ALOHA" when my family and I dropped my brother off at college.
