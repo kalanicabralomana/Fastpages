@@ -22,3 +22,5 @@ Repository: The location on GitHub where we modify our fastpages and collect all
 Clone: copying a repository onto you own system for you to modify.
 
 Commit: This means to save and commit changes in order for the changes to update on your site.
+
+Procedural Abstraction: bit of code are written and are generalized by variable parameter
