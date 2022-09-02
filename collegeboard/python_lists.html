@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -497,6 +497,83 @@ Sunny Naidu
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Kalani"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Cabral-Omana"</span><span class="p">,</span>
+    <span class="s2">"DateofBirth"</span><span class="p">:</span> <span class="s2">"April 18"</span><span class="p">,</span>
+    <span class="s2">"Sport"</span><span class="p">:</span> <span class="s2">"Soccer"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"kcabralomana@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"FavortieCandies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Twix, Starburst"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Navan"</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Yatavelli"</span><span class="p">,</span>
+    <span class="s2">"DateofBirth"</span><span class="p">:</span> <span class="s2">"Octorber 31"</span><span class="p">,</span>
+    <span class="s2">"Sport"</span><span class="p">:</span> <span class="s2">"Football"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"navanyata1334@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"FavortieCandies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"KitKat"</span><span class="p">,</span> <span class="s2">"Snickers"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">FirstName</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"First Name:"</span><span class="p">)</span>
+<span class="n">LastName</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Last Name:"</span><span class="p">)</span>
+<span class="n">DateofBirth</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Date of Birth:"</span><span class="p">)</span>
+<span class="n">Sport</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Sport you play:"</span><span class="p">)</span>
+<span class="n">Email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Personal E-mail:"</span><span class="p">)</span>
+
+<span class="n">FavoriteCandies</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">max_length</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">FavoriteCandies</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_length</span><span class="p">:</span>
+    <span class="n">usercandy</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Your favorite candies: "</span><span class="p">)</span>
+    <span class="n">FavoriteCandies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">usercandy</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">FavoriteCandies</span><span class="p">)</span>
+    
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="n">FirstName</span><span class="p">,</span>
+    <span class="s2">"LastName"</span><span class="p">:</span> <span class="n">LastName</span><span class="p">,</span>
+    <span class="s2">"DateofBirth"</span><span class="p">:</span> <span class="n">DateofBirth</span><span class="p">,</span>
+    <span class="s2">"Sport"</span><span class="p">:</span> <span class="n">Sport</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="n">Email</span><span class="p">,</span>
+    <span class="s2">"FavoriteCandies"</span><span class="p">:</span> <span class="n">FavoriteCandies</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Twix', 'Starburst']
+[{'FirstName': 'Kalani', 'LastName': 'Cabral-Omana', 'DateofBirth': 'April 18', 'Sport': 'Soccer', 'Email': 'kcabralomana@gmail.com', 'FavortieCandies': ['Twix, Starburst']}, {'FirstName': 'Navan', 'LastName': 'Yatavelli', 'DateofBirth': 'Octorber 31', 'Sport': 'Football', 'Email': 'navanyata1334@gmail.com', 'FavortieCandies': ['KitKat', 'Snickers']}, {'FirstName': 'Kalani', 'LastName': 'Cabral-Omana', 'DateofBirth': 'April 18', 'Sport': 'Soccer', 'Email': 'kcabralomana@gmail.com', 'FavoriteCandies': ['Twix', 'Starburst']}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
