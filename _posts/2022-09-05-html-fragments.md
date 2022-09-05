@@ -10,6 +10,7 @@ comments: true
 ---
 
 # HTML Fragments
+
 ## Changing Theme from Minima to Hacker
 ![]({{site.baseurl}}/images/frontpage.jpg width="250" height="340" "https://github.com/fastai/fastpages")
 
@@ -28,6 +29,8 @@ typed in fastpages and the page outputs links to any post,
 notebook, page and/or markdown that contains fastpages in it.
 
 ## Tags
-![]({{site.baseurl}}/images/tags screenshot.jpg width="250" height="340" "https://github.com/fastai/fastpages")
+![]({{site.baseurl}}/images/tags better.jpg "https://github.com/fastai/fastpages")
 
-As you can see I have tags 
+As you can see I have tags for notesbooks that incule code in 
+them as well as corresponding weeks for the different 
+assignments.
