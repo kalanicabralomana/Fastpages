@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Pictures from my phone
-categories: [markdown, Week 2]
+categories: [markdown, Week 1]
 title: Picture Collage
 author: Kalani Cabral-Omana
 show_tags: true
