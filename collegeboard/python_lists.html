@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      9 min read
     
 </span></p>
 
@@ -504,51 +504,167 @@ Sunny Naidu
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"Kalani Cabral-Omana"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+<span class="c1"># variable of type integer</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"age"</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+
+<span class="c1"># variable of type float</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"score"</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># variable of type list (many values in one variable)</span>
+<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"- langs[0]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># variable of type dictionary (a group of keys and values)</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+    <span class="s2">"score"</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+    <span class="s2">"langs"</span><span class="p">:</span> <span class="n">langs</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"person"</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'- person["name"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>name Kalani Cabral-Omana &lt;class 'str'&gt;
+age 16 &lt;class 'int'&gt;
+score 100.0 &lt;class 'float'&gt;
+
+langs ['Python', 'JavaScript', 'Java'] &lt;class 'list'&gt;
+- langs[0] Python &lt;class 'str'&gt;
+
+person {'name': 'Kalani Cabral-Omana', 'age': 16, 'score': 100.0, 'langs': ['Python', 'JavaScript', 'Java']} &lt;class 'dict'&gt;
+- person["name"] Kalani Cabral-Omana &lt;class 'str'&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Shoes</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Nike"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"Dunk"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2016"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"V12"</span><span class="p">,</span>
+<span class="p">})</span>
+
+
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Vans"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"S580"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2020"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"V10"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Converse"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"G-Wagon"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2021"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"V10"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Jeep"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"Gladiator Rubicon"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2020"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"V6"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Cadillac"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"Escalade 600 Black"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2023"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"V8"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Rivian"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"R1S"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2023"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"Electric"</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">Shoes</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s2">"Shoe"</span><span class="p">:</span> <span class="s2">"Land Rover"</span><span class="p">,</span>
+    <span class="s2">"Model"</span><span class="p">:</span> <span class="s2">"Range Rover"</span><span class="p">,</span>
+    <span class="s2">"Year"</span><span class="p">:</span> <span class="s2">"2021"</span><span class="p">,</span>
+    <span class="s2">"Color"</span><span class="p">:</span> <span class="s2">"V8"</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="c1"># Print the data structure</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Shoes</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
 
-
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Kalani"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Cabral-Omana"</span><span class="p">,</span>
-    <span class="s2">"DateofBirth"</span><span class="p">:</span> <span class="s2">"April 18"</span><span class="p">,</span>
-    <span class="s2">"Sport"</span><span class="p">:</span> <span class="s2">"Soccer"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"kcabralomana@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"FavortieCandies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Twix, Starburst"</span><span class="p">]</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"April 18"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"kcabralomana@gmail.com.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Shoes"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Nike Dunks, Black Vans, Black Converse, Nike Blazers"</span><span class="p">]</span>
 <span class="p">})</span>
 
+<span class="c1"># Partner</span>
+<span class="c1"># Append to List a 2nd Dictionary of key/values</span>
 <span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
     <span class="s2">"FirstName"</span><span class="p">:</span> <span class="s2">"Navan"</span><span class="p">,</span>
     <span class="s2">"LastName"</span><span class="p">:</span> <span class="s2">"Yatavelli"</span><span class="p">,</span>
-    <span class="s2">"DateofBirth"</span><span class="p">:</span> <span class="s2">"Octorber 31"</span><span class="p">,</span>
-    <span class="s2">"Sport"</span><span class="p">:</span> <span class="s2">"Football"</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"navanyata1334@gmail.com"</span><span class="p">,</span>
-    <span class="s2">"FavortieCandies"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"KitKat"</span><span class="p">,</span> <span class="s2">"Snickers"</span><span class="p">]</span>
+    <span class="s2">"DOB"</span><span class="p">:</span> <span class="s2">"October 31"</span><span class="p">,</span>
+    <span class="s2">"Residence"</span><span class="p">:</span> <span class="s2">"San Diego"</span><span class="p">,</span>
+    <span class="s2">"Email"</span><span class="p">:</span> <span class="s2">"navany@gmail.com"</span><span class="p">,</span>
+    <span class="s2">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"White Yeezy, Yeezy Slides"</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
-
-<span class="n">FirstName</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"First Name:"</span><span class="p">)</span>
-<span class="n">LastName</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Last Name:"</span><span class="p">)</span>
-<span class="n">DateofBirth</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Date of Birth:"</span><span class="p">)</span>
-<span class="n">Sport</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Sport you play:"</span><span class="p">)</span>
-<span class="n">Email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Personal E-mail:"</span><span class="p">)</span>
-
-<span class="n">FavoriteCandies</span><span class="o">=</span><span class="p">[]</span>
-<span class="n">max_length</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">FavoriteCandies</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_length</span><span class="p">:</span>
-    <span class="n">usercandy</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Your favorite candies: "</span><span class="p">)</span>
-    <span class="n">FavoriteCandies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">usercandy</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">FavoriteCandies</span><span class="p">)</span>
-    
-<span class="n">InfoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">"FirstName"</span><span class="p">:</span> <span class="n">FirstName</span><span class="p">,</span>
-    <span class="s2">"LastName"</span><span class="p">:</span> <span class="n">LastName</span><span class="p">,</span>
-    <span class="s2">"DateofBirth"</span><span class="p">:</span> <span class="n">DateofBirth</span><span class="p">,</span>
-    <span class="s2">"Sport"</span><span class="p">:</span> <span class="n">Sport</span><span class="p">,</span>
-    <span class="s2">"Email"</span><span class="p">:</span> <span class="n">Email</span><span class="p">,</span>
-    <span class="s2">"FavoriteCandies"</span><span class="p">:</span> <span class="n">FavoriteCandies</span><span class="p">,</span>
-<span class="p">})</span>
-
+<span class="c1"># Print the data structure</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
 </pre></div>
 
@@ -562,9 +678,152 @@ Sunny Naidu
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['Twix', 'Starburst']
-[{'FirstName': 'Kalani', 'LastName': 'Cabral-Omana', 'DateofBirth': 'April 18', 'Sport': 'Soccer', 'Email': 'kcabralomana@gmail.com', 'FavortieCandies': ['Twix, Starburst']}, {'FirstName': 'Navan', 'LastName': 'Yatavelli', 'DateofBirth': 'Octorber 31', 'Sport': 'Football', 'Email': 'navanyata1334@gmail.com', 'FavortieCandies': ['KitKat', 'Snickers']}, {'FirstName': 'Kalani', 'LastName': 'Cabral-Omana', 'DateofBirth': 'April 18', 'Sport': 'Soccer', 'Email': 'kcabralomana@gmail.com', 'FavoriteCandies': ['Twix', 'Starburst']}]
+<pre>[{'FirstName': 'Kalani', 'LastName': 'Cabral-Omana', 'DOB': 'April 18', 'Residence': 'San Diego', 'Email': 'kcabralomana@gmail.com.com', 'Owns_Shoes': ['Nike Dunks, Black Vans, Black Converse, Nike Blazers']}, {'FirstName': 'Navan', 'LastName': 'Yatavelli', 'DOB': 'October 31', 'Residence': 'San Diego', 'Email': 'navany@gmail.com', 'Owns_Cars': ['White Yeezy, Yeezy Slides']}]
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"LastName"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"DOB"</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Shoes: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">", "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"Owns_Shoes"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+
+<span class="c1"># for loop iterates on length of InfoDb</span>
+<span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"For loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+
+<span class="n">for_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>For loop output
+
+Kalani Cabral-Omana
+	 Residence: San Diego
+	 Birth Day: April 18
+	 Shoes: Nike Dunks, Black Vans, Black Converse, Nike Blazers
+
+Navan Yatavelli
+	 Residence: San Diego
+	 Birth Day: October 31
+	 Shoes: </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb Cell 16</span> in <span class="ansi-cyan-fg">&lt;cell line: 16&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span>     for record in InfoDb:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span>         print_data(record)
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> for_loop()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb Cell 16</span> in <span class="ansi-cyan-fg">for_loop</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> print("For loop output\n")
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> for record in InfoDb:
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span>     print_data(record)
+
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb Cell 16</span> in <span class="ansi-cyan-fg">print_data</span><span class="ansi-blue-fg">(d_rec)</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> print("\t", "Birth Day:", d_rec["DOB"])
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> print("\t", "Shoes: ", end="")  # end="" make sure no return occurs
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> print(", ".join(d_rec["Owns_Shoes"]))  # join allows printing a string list with separator
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X21sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> print()
+
+<span class="ansi-red-fg">KeyError</span>: 'Owns_Shoes'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"While loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span>
+
+<span class="n">while_loop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>While loop output
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb Cell 17</span> in <span class="ansi-cyan-fg">&lt;cell line: 10&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span>         i += 1
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span>     return
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> while_loop()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb Cell 17</span> in <span class="ansi-cyan-fg">while_loop</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> print("While loop output\n")
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> i = 0
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> while i &lt; len(InfoDb):
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span>     record = InfoDb[i]
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-08-29-TP120-python_lists.ipynb#X22sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span>     print_data(record)
+
+<span class="ansi-red-fg">NameError</span>: name 'InfoDb' is not defined</pre>
 </div>
 </div>
 
