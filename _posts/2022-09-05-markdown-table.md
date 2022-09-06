@@ -5,6 +5,7 @@ description: Example Markdown Table
 categories: [markdown]
 title: Markdown Table
 ---
+{{ page.title }}
 
 ## The Weeks Ahead
 
