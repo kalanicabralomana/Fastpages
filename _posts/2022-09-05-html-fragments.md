@@ -10,7 +10,7 @@ comments: true
 
 # HTML Fragments
 
-## Changing Theme from Minima to Hacker
+## Changing Theme from Minima to Leap Day
 ![]({{site.baseurl}}/images/leapday.png "https://github.com/fastai/fastpages")
 
 When I changed my theme from Minima to Leap Day, the first thing I 
