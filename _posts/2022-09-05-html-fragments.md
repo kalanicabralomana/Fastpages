@@ -1,7 +1,6 @@
 ---
 toc: true
 layout: post
-description: Pictures from my phone
 categories: [markdown, Week 2]
 title: HTML Fragments
 author: Kalani Cabral-Omana
