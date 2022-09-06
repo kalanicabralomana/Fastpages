@@ -11,13 +11,15 @@ comments: true
 # HTML Fragments
 
 ## Changing Theme from Minima to Hacker
-![]({{site.baseurl}}/images/frontpage (1).png "https://github.com/fastai/fastpages")
+![]({{site.baseurl}}/images/leapday.png "https://github.com/fastai/fastpages")
 
-When I changes my theme from Minima to Hacker, I noticed that 
-all of the indents for the text was removed and all the text 
-was shifted to the left. I also noticed that any text that has 
-an embedded link turned blue (links on the top of the front 
-page were condensed on the left).
+When I changed my theme from Minima to Leap Day, the first thing I 
+noticed was that all the colors changed. I also noticed that all of my 
+posts moved to the left of my fastpages site. I also noticed that the 
+formatting and text font changed. I liked how the title of my site was 
+centered at the top of my screen. The only thing that I didn't liek was 
+how there is empty space on the right side of the site. Overall I like 
+how nicer and cleaner the theme is compared to minima.
 
 ## Search Feature
 ![]({{site.baseurl}}/images/fastpages screenshot.png "https://github.com/fastai/fastpages")
