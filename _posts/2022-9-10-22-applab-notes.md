@@ -11,7 +11,7 @@ comments: true
 
 # AppLab Notes
 
-[Padres Quiz](https://studio.code.org/projects/applab/1-7Ay3DGrx9xoW2zQ-wk47OqUl7I5NH1S6rbFK0EER0)
+## [Padres Quiz](https://studio.code.org/projects/applab/1-7Ay3DGrx9xoW2zQ-wk47OqUl7I5NH1S6rbFK0EER0)
 
 ## Design Process
 
@@ -51,7 +51,7 @@ to show correct or incorrect after entering the answer. I later
 displayed that in the final screen so if a player earns 3/3 
 they get a smiley face and if not they get a frowny face
 
-[Calculator](https://studio.code.org/projects/applab/BN0MTSd10DQGD4fLjN56-LzJUy0Rxw-KNOZXFoasXhU)
+## [Calculator](https://studio.code.org/projects/applab/BN0MTSd10DQGD4fLjN56-LzJUy0Rxw-KNOZXFoasXhU)
 
 ## Design Process
 
