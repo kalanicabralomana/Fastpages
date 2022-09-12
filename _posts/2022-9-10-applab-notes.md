@@ -13,6 +13,8 @@ comments: true
 
 ## [Padres Quiz](https://studio.code.org/projects/applab/1-7Ay3DGrx9xoW2zQ-wk47OqUl7I5NH1S6rbFK0EER0)
 
+1) Purpose to test users knowledge about the Padres 2) I set a variable called correct to 0 and as the user enter correct answers it would add to that variable giving a final score in the end. 3) I was not able to implement this my own function. 4) I was not able to implement my own function. 5) I used if statements to change an image to a smiley face or a sad face depending on how many question were answered correct. 6) I used console.log to see if everything worked orderly.
+
 ## Design Process
 
 When we first started with Code.org we decided to plan out what 
