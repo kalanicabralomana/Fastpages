@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Making AppLab Quiz on Code.org
+description: Performance Task
 categories: [markdown, Week 3]
-title: AppLab Notes
+title: Performance Task
 author: Kalani Cabral-Omana
 show_tags: true
 comments: true
