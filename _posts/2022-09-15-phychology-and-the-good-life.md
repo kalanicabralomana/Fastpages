@@ -38,3 +38,36 @@ In the video she talks about realizing what you are doing and focusing is import
 - Being healthy
 - Be kind to others
 - Spread love
+
+## Own Self Study
+
+After we watched the video we decided to take our only little survey to see how school can affect students well-being here at Del Norte.
+
+Below are some of the questions we asked and results that we recieved
+
+## Stress Levels
+![]({{site.baseurl}}/images/stress during school.png "https://github.com/fastai/fastpages")
+
+As you can see by the data received from the students there is an incredibly high peak at the higher stress levels. Students are stressed out due to many factors that should be addressed.
+
+## Anxiety Levels
+![]({{site.baseurl}}/images/anxiety.png "https://github.com/fastai/fastpages")
+
+We can see that there is a bell shaped curve residing around a level 4 anxiety. This may indicate that students aren't too stressed out to have high anxiety but stressed out enough to relatively still have high anxiety.
+
+## Effect of homework
+![]({{site.baseurl}}/images/amount of hw.png "https://github.com/fastai/fastpages")
+
+As we can see by this pie chart a majority of students are overwhelmed by their homework whether it be the amount of homework or the difficulty of it.
+
+## Loneliness
+![]({{site.baseurl}}/images/lonely.png "https://github.com/fastai/fastpages")
+
+We can see that around two thirds of students that answered this survey responded yes to being lonely. This may suggest unhappy students to to social interactions and connections being important to a persons happiness.
+
+## Takeaway
+
+From this little study we conducted as a team we were able to conclude that school does take a toll on the students mental health. But it is more about how the student handles it. The student may be able to handle everything and not be overwhelmed by work but did they answer yes on feeling lonely if that was the case. This survey gave us the chance to analyze students well-being while relating it to the video of the Psychology of a Good Life.
+
+
+
