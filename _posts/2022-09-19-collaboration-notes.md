@@ -13,7 +13,7 @@ title: Collaboration Unit 1.1
 - Improves communication skills
 - Improves productivity and a chance to learn from one another
 
-## Video 1.1
+## Super Mario Example
 - Kensuke and Tanabe and Shigeru Miyambo worked together to make both games (collaborating)
 - Tanabe was level designer while Miyamoto was director (different roles in a team)
 - Collaboration between the two was able to make a good game including both of their talents and perspectives
