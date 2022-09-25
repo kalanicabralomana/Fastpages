@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Java Script
-categories: [jupyter, code]
+categories: [code]
 permalink: /notes/
 ---
 
