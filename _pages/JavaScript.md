@@ -2,7 +2,7 @@
 layout: page
 title: Java Script
 categories: [code]
-permalink: /notes/
+permalink: /javascript/
 ---
 
 # Jupyter Individual Design Elementss
