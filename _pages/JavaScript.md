@@ -5,4 +5,4 @@ categories: [code]
 permalink: /notes/
 ---
 
-# Jupyter Individual Design Elementss
+# Jupyter Individual Design Elements
