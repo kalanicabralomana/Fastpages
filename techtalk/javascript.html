@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      6 min read
     
 </span></p>
 
@@ -149,15 +149,7 @@ window.onload = wrap_img;
 <h3 id="console.log-output">
 <a class="anchor" href="#console.log-output" aria-hidden="true"><span class="octicon octicon-link"></span></a>console.log output<a class="anchor-link" href="#console.log-output"> </a>
 </h3>
-<p>Output to console using the classic programming introduction using a "Hello, World!" message.</p>
-<ul>
-<li>The command or function is <mark>console.log()</mark>
-</li>
-<li>"Hello, World" is a String literal. This is the referred to as <mark>Static text</mark>, as it does not change.</li>
-<li>"Hello, World" is a parameter to the console.log command.</li>
-<li>The console.log <mark>command outputs the parameter to the console</mark>, so you can see it in this Jupyter document.</li>
-<li>Note, in a Web Application, console.log is used for debugging and is not visible from the browser via HTML.  It is used behind the scenes, when using Inspect-&gt;Console from the browser.</li>
-</ul>
+<p>console.log command outputs the parameter to the console, so that you can see it in the Jupyter document.</p>
 
 </div>
 </div>
@@ -199,11 +191,7 @@ window.onload = wrap_img;
 <h3 id="console.log-output-showing-use-of-variable">
 <a class="anchor" href="#console.log-output-showing-use-of-variable" aria-hidden="true"><span class="octicon octicon-link"></span></a>console.log output showing use of variable<a class="anchor-link" href="#console.log-output-showing-use-of-variable"> </a>
 </h3>
-<p>This second example is a <mark>sequence of code</mark>, two or more lines forms a sequence.  This example defines a variable, then outputs the msg to terminal.</p>
-<ul>
-<li>The variable "var msg =" is used to capture the data</li>
-<li>The console.log(msg) outputs to console</li>
-</ul>
+<p>This second example is a sequence of code, two or more lines forms a sequence.  This example defines a variable, then outputs the msg to terminal.</p>
 
 </div>
 </div>
@@ -247,14 +235,6 @@ window.onload = wrap_img;
 <a class="anchor" href="#console.log-output-showing-use-of-a-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>console.log output showing use of a function<a class="anchor-link" href="#console.log-output-showing-use-of-a-function"> </a>
 </h3>
 <p>This example passes the previously defined variable "msg" to the newly defined "function logIt(output)".</p>
-<ul>
-<li>There are two steps in the code, the <mark>definition of the function and the call to the function</mark>.<ul>
-<li>"function logIt(output) {}" and everything between curly braces is the definitions of the function.</li>
-<li>"logIt(msg)" is the call to the function, this actually activates the function.  If you remove this line you will not receive any output to console.</li>
-</ul>
-</li>
-<li>Since the variable "msg" was defined in previous cell, it is used a parameter when calling the logMessage function.</li>
-</ul>
 
 </div>
 </div>
@@ -299,7 +279,7 @@ window.onload = wrap_img;
 <h3 id="Showing-reuse-of-a-function">
 <a class="anchor" href="#Showing-reuse-of-a-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Showing reuse of a function<a class="anchor-link" href="#Showing-reuse-of-a-function"> </a>
 </h3>
-<p>Now that a function is defined, it can be called from any of the subsequent cell in the Jupyter notebook.  A function/method, is a process of creating a <mark>procedural abstraction</mark>. This a programming practice to promote reuse versus coding the same thing over and over.</p>
+<p>Now that a function is defined, it can be called from any of the subsequent cell in the Jupyter notebook.  A function/method, is a process of creating a procedural abstraction. This a programming practice to promote reuse versus coding the same thing over and over.</p>
 <ul>
 <li>First call sends a different string message</li>
 <li>Second call sends a number</li>
@@ -349,7 +329,7 @@ Hello, Students!
 <h3 id="Dynamic-or-Loosely-typed-language-(string,-number)">
 <a class="anchor" href="#Dynamic-or-Loosely-typed-language-(string,-number)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic or Loosely typed language (string, number)<a class="anchor-link" href="#Dynamic-or-Loosely-typed-language-(string,-number)"> </a>
 </h3>
-<p><mark>JavaScript is a loosely typed language</mark>, meaning you don't have to specify what type of information will be stored in a variable in advance.  The variable type is determined at runtime.  This is similar to Python and most interpretive languages.  Java which is a compiled language is strongly typed, thus you will see string, integer, double, and object in the source code. In JavaScript, the "typeof" keyword returns the type.</p>
+<p>JavaScript is a loosely typed language, don't have to specify what type of information will be stored in a variable in advance. This is similar to Python and most interpretive languages. Java which is a compiled language is strongly typed, thus you will see string, integer, double, and object in the source code. In JavaScript, the "typeof" keyword returns the type.</p>
 
 </div>
 </div>
@@ -364,8 +344,8 @@ Hello, Students!
 <div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">logItType</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">output</span><span class="p">,</span> <span class="s2">";"</span><span class="p">,</span> <span class="nx">output</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Looking at dynamic nature of types in JavaScript"</span><span class="p">)</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">);</span> <span class="c1">// String</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"dynamic nature of types in JavaScript"</span><span class="p">)</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="s2">"hello bro"</span><span class="p">);</span> <span class="c1">// String</span>
 <span class="nx">logItType</span><span class="p">(</span><span class="mf">2020</span><span class="p">);</span>    <span class="c1">// Number</span>
 <span class="nx">logItType</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">]);</span>  <span class="c1">// Object is generic for this Array, which similar to Python List</span>
 </pre></div>
@@ -380,8 +360,8 @@ Hello, Students!
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Looking at dynamic nature of types in JavaScript
-string ; hello
+<pre>dynamic nature of types in JavaScript
+string ; hello bro
 number ; 2020
 object ; [ 1, 2, 3 ]
 </pre>
@@ -400,14 +380,11 @@ object ; [ 1, 2, 3 ]
 <h3 id="Build-a-Person-Function/Class-object-and-JSON">
 <a class="anchor" href="#Build-a-Person-Function/Class-object-and-JSON" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build a Person Function/Class object and JSON<a class="anchor-link" href="#Build-a-Person-Function/Class-object-and-JSON"> </a>
 </h3>
-<p>JavaScript functions have special properties and syntax is shown in many ways.  In fact, a Class in JavaScript is a special function.  Jupyter Notebooks seems to be more friendly to "function" definitions versus "Class", thus this lesson uses "function" and "prototype" versus "Class".</p>
+<p>JavaScript functions have special properties and syntax is shown in many ways. In fact, a Class in JavaScript is a special function. Jupyter Notebooks seems to be more friendly to "function" definitions versus "Class", thus this lesson uses "function" and "prototype" versus "Class".</p>
 <ul>
-<li>
-<mark>Definition of function allows for a collection of data</mark>, the "function Person" allows programmer to retain name, github id, and class of designation.</li>
-<li>
-<mark>Definition of a prototype allow for the definition of a method associated with the function</mark> , the "Person.prototype.toJSON" allows the collection of data to be expressed in a json/string versus JavaScript object.</li>
-<li>
-<mark>Instance of a function</mark>, the "var teacher = new Person("Mr M", "jm1021", 1977)" line makes a variable "teacher" which is an object representation of "function Person".</li>
+<li>Definition of function allows for a collection of data</li>
+<li>Definition of a prototype allow for the definition of a method associated with the function</li>
+<li>Instance of a function</li>
 </ul>
 
 </div>
@@ -441,12 +418,12 @@ object ; [ 1, 2, 3 ]
 <span class="p">}</span>
 
 <span class="c1">// make a new Person and assign to variable teacher</span>
-<span class="kd">var</span> <span class="nx">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Mr M"</span><span class="p">,</span> <span class="s2">"jm1021"</span><span class="p">,</span> <span class="mf">1977</span><span class="p">);</span>
-<span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Teacher"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">thegoat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Kalani"</span><span class="p">,</span> <span class="s2">"kalanicabralomana"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">);</span>
+<span class="nx">thegoat</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"GOAT"</span><span class="p">);</span>
 
 <span class="c1">// output of Object and JSON/string associated with Teacher</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">teacher</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  <span class="c1">// json/string is useful when passing data on internet</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">thegoat</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">thegoat</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  <span class="c1">// json/string is useful when passing data on internet</span>
 </pre></div>
 
     </div>
@@ -459,8 +436,12 @@ object ; [ 1, 2, 3 ]
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; Person { name: 'Mr M', ghID: 'jm1021', classOf: 1977, role: 'Teacher' }
-string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
+<pre>object ; Person {
+  name: 'Kalani',
+  ghID: 'kalanicabralomana',
+  classOf: 2024,
+  role: 'GOAT' }
+string ; {"name":"Kalani","ghID":"kalanicabralomana","classOf":2024,"role":"GOAT"}
 </pre>
 </div>
 </div>
@@ -505,11 +486,11 @@ string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
 <span class="p">];</span>
 
 <span class="c1">// define a classroom and build Classroom objects and json</span>
-<span class="kd">function</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">teacher</span><span class="p">,</span> <span class="nx">students</span><span class="p">){</span> <span class="c1">// 1 teacher, many student</span>
+<span class="kd">function</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">thegoat</span><span class="p">,</span> <span class="nx">students</span><span class="p">){</span> <span class="c1">// 1 teacher, many student</span>
     <span class="c1">// start Classroom with Teacher</span>
-    <span class="nx">teacher</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Teacher"</span><span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">teacher</span> <span class="o">=</span> <span class="nx">teacher</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="nx">teacher</span><span class="p">];</span>
+    <span class="nx">thegoat</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"GOAT"</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">thegoat</span> <span class="o">=</span> <span class="nx">thegoat</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="nx">thegoat</span><span class="p">];</span>
     <span class="c1">// add each Student to Classroom</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">students</span> <span class="o">=</span> <span class="nx">students</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">students</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">student</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">student</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Student"</span><span class="p">);</span> <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">student</span><span class="p">);</span> <span class="p">});</span>
@@ -519,7 +500,7 @@ string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
 <span class="p">}</span>
 
 <span class="c1">// make a CompSci classroom from formerly defined teacher and students</span>
-<span class="nx">compsci</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">teacher</span><span class="p">,</span> <span class="nx">students</span><span class="p">);</span>
+<span class="nx">compsci</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Classroom</span><span class="p">(</span><span class="nx">thegoat</span><span class="p">,</span> <span class="nx">students</span><span class="p">);</span>
 
 <span class="c1">// output of Objects and JSON in CompSci classroom</span>
 <span class="nx">logItType</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">classroom</span><span class="p">);</span>  <span class="c1">// constructed classroom object</span>
@@ -538,7 +519,11 @@ string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; [ Person { name: 'Mr M', ghID: 'jm1021', classOf: 1977, role: 'Teacher' },
+<pre>object ; [ Person {
+    name: 'Kalani',
+    ghID: 'kalanicabralomana',
+    classOf: 2024,
+    role: 'GOAT' },
   Person {
     name: 'Anthony',
     ghID: 'tonyhieu',
@@ -557,9 +542,12 @@ string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
     classOf: 2023,
     role: 'Student' },
   Person { name: 'Vidhi', ghID: 'unknown', classOf: 2024, role: 'Student' } ]
-string ; Mr M
-string ; {"name":"Mr M","ghID":"jm1021","classOf":1977,"role":"Teacher"}
-object ; { name: 'Mr M', ghID: 'jm1021', classOf: 1977, role: 'Teacher' }
+string ; Kalani
+string ; {"name":"Kalani","ghID":"kalanicabralomana","classOf":2024,"role":"GOAT"}
+object ; { name: 'Kalani',
+  ghID: 'kalanicabralomana',
+  classOf: 2024,
+  role: 'GOAT' }
 </pre>
 </div>
 </div>
@@ -663,10 +651,10 @@ object ; { name: 'Mr M', ghID: 'jm1021', classOf: 1977, role: 'Teacher' }
 <th><mark>Role</mark></th>
 </tr>
 <tr>
-<td>Mr M</td>
-<td>jm1021</td>
-<td>1977</td>
-<td>Teacher</td>
+<td>Kalani</td>
+<td>kalanicabralomana</td>
+<td>2024</td>
+<td>GOAT</td>
 </tr>
 <tr></tr>
 <tr>
