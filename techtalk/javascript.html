@@ -398,9 +398,9 @@ object ; [ 1, 2, 3 ]
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a function to hold data for a Person</span>
-<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sport</span><span class="p">,</span> <span class="nx">classOf</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">=</span> <span class="nx">ghID</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">sport</span> <span class="o">=</span> <span class="nx">sport</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">=</span> <span class="nx">classOf</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 <span class="p">}</span>
@@ -412,13 +412,13 @@ object ; [ 1, 2, 3 ]
 
 <span class="c1">// define a JSON conversion "method" associated with Person</span>
 <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">sport</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">sport</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
     <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// make a new Person and assign to variable teacher</span>
-<span class="kd">var</span> <span class="nx">thegoat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Kalani"</span><span class="p">,</span> <span class="s2">"kalanicabralomana"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">thegoat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Kalani"</span><span class="p">,</span> <span class="s2">"soccer"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">);</span>
 <span class="nx">thegoat</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"GOAT"</span><span class="p">);</span>
 
 <span class="c1">// output of Object and JSON/string associated with Teacher</span>
@@ -436,12 +436,8 @@ object ; [ 1, 2, 3 ]
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; Person {
-  name: 'Kalani',
-  ghID: 'kalanicabralomana',
-  classOf: 2024,
-  role: 'GOAT' }
-string ; {"name":"Kalani","ghID":"kalanicabralomana","classOf":2024,"role":"GOAT"}
+<pre>object ; Person { name: 'Kalani', sport: 'soccer', classOf: 2024, role: 'GOAT' }
+string ; {"name":"Kalani","sport":"soccer","classOf":2024,"role":"GOAT"}
 </pre>
 </div>
 </div>
@@ -477,12 +473,9 @@ string ; {"name":"Kalani","ghID":"kalanicabralomana","classOf":2024,"role":"GOAT
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a student Array of Person(s)</span>
 <span class="kd">var</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span> 
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Anthony"</span><span class="p">,</span> <span class="s2">"tonyhieu"</span><span class="p">,</span> <span class="mf">2022</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Bria"</span><span class="p">,</span> <span class="s2">"B-G101"</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Allie"</span><span class="p">,</span> <span class="s2">"xiaoa0"</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Tigran"</span><span class="p">,</span> <span class="s2">"Tigran7"</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Rebecca"</span><span class="p">,</span> <span class="s2">"Rebecca-123"</span><span class="p">,</span> <span class="mf">2023</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Vidhi"</span><span class="p">,</span> <span class="s2">"unknown"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">)</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Navan"</span><span class="p">,</span> <span class="s2">"football"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Alex"</span><span class="p">,</span> <span class="s2">"basketball"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Safin"</span><span class="p">,</span> <span class="s2">"tennis"</span><span class="p">,</span> <span class="mf">2024</span><span class="p">),</span>
 <span class="p">];</span>
 
 <span class="c1">// define a classroom and build Classroom objects and json</span>
@@ -519,35 +512,21 @@ string ; {"name":"Kalani","ghID":"kalanicabralomana","classOf":2024,"role":"GOAT
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; [ Person {
-    name: 'Kalani',
-    ghID: 'kalanicabralomana',
+<pre>object ; [ Person { name: 'Kalani', sport: 'soccer', classOf: 2024, role: 'GOAT' },
+  Person {
+    name: 'Navan',
+    sport: 'football',
     classOf: 2024,
-    role: 'GOAT' },
-  Person {
-    name: 'Anthony',
-    ghID: 'tonyhieu',
-    classOf: 2022,
-    role: 'Student' },
-  Person { name: 'Bria', ghID: 'B-G101', classOf: 2023, role: 'Student' },
-  Person { name: 'Allie', ghID: 'xiaoa0', classOf: 2023, role: 'Student' },
-  Person {
-    name: 'Tigran',
-    ghID: 'Tigran7',
-    classOf: 2023,
     role: 'Student' },
   Person {
-    name: 'Rebecca',
-    ghID: 'Rebecca-123',
-    classOf: 2023,
+    name: 'Alex',
+    sport: 'basketball',
+    classOf: 2024,
     role: 'Student' },
-  Person { name: 'Vidhi', ghID: 'unknown', classOf: 2024, role: 'Student' } ]
+  Person { name: 'Safin', sport: 'tennis', classOf: 2024, role: 'Student' } ]
 string ; Kalani
-string ; {"name":"Kalani","ghID":"kalanicabralomana","classOf":2024,"role":"GOAT"}
-object ; { name: 'Kalani',
-  ghID: 'kalanicabralomana',
-  classOf: 2024,
-  role: 'GOAT' }
+string ; {"name":"Kalani","sport":"soccer","classOf":2024,"role":"GOAT"}
+object ; { name: 'Kalani', sport: 'soccer', classOf: 2024, role: 'GOAT' }
 </pre>
 </div>
 </div>
@@ -600,7 +579,7 @@ object ; { name: 'Kalani',
   <span class="c1">// Heading for Array Columns</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Name"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
-  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"GitHub ID"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Sport"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Class Of"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Role"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
   <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;/tr&gt;"</span><span class="p">;</span>
@@ -610,7 +589,7 @@ object ; { name: 'Kalani',
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
     <span class="c1">// td for each column of data</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">sport</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">role</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="c1">// tr to end line</span>
@@ -646,55 +625,34 @@ object ; { name: 'Kalani',
 <div style="display:inline-block;background:black;border: 2px solid grey;box-shadow: 0.8em 0.4em 0.4em grey;"><table>
 <tr>
 <th><mark>Name</mark></th>
-<th><mark>GitHub ID</mark></th>
+<th><mark>Sport</mark></th>
 <th><mark>Class Of</mark></th>
 <th><mark>Role</mark></th>
 </tr>
 <tr>
 <td>Kalani</td>
-<td>kalanicabralomana</td>
+<td>soccer</td>
 <td>2024</td>
 <td>GOAT</td>
 </tr>
 <tr></tr>
 <tr>
-<td>Anthony</td>
-<td>tonyhieu</td>
-<td>2022</td>
+<td>Navan</td>
+<td>football</td>
+<td>2024</td>
 <td>Student</td>
 </tr>
 <tr></tr>
 <tr>
-<td>Bria</td>
-<td>B-G101</td>
-<td>2023</td>
+<td>Alex</td>
+<td>basketball</td>
+<td>2024</td>
 <td>Student</td>
 </tr>
 <tr></tr>
 <tr>
-<td>Allie</td>
-<td>xiaoa0</td>
-<td>2023</td>
-<td>Student</td>
-</tr>
-<tr></tr>
-<tr>
-<td>Tigran</td>
-<td>Tigran7</td>
-<td>2023</td>
-<td>Student</td>
-</tr>
-<tr></tr>
-<tr>
-<td>Rebecca</td>
-<td>Rebecca-123</td>
-<td>2023</td>
-<td>Student</td>
-</tr>
-<tr></tr>
-<tr>
-<td>Vidhi</td>
-<td>unknown</td>
+<td>Safin</td>
+<td>tennis</td>
 <td>2024</td>
 <td>Student</td>
 </tr>
