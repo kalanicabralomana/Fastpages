@@ -20,7 +20,7 @@ Inside this file is instructions to build container that contain personal flask.
 
 # Nginx
 
-
+![]({{site.baseurl}}/images/nginx photo.png "https://github.com/fastai/fastpages")
 
 ![]({{site.baseurl}}/images/nginx.png "https://github.com/fastai/fastpages")
 
