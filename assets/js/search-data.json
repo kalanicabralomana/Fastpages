@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "AWS Deployment",
-            "content": "Docker Compose File . Inside this file is intructions to build container that contain personal flask . . Nginx . cURL Command . Tests if the personal flask is working on local machine . .",
+            "content": "Docker . We created 4 containers with each site in one of the containers bound to 8080 with their own unique ports. . . Docker Compose File . Inside this file is instructions to build container that contain personal flask. . . Nginx . . cURL Command . Tests if the personal flask is working on local machine . .",
             "url": "https://kcabralomana.github.io/Fastpages/markdown/2022/10/04/aws-deployment.html",
             "relUrl": "/markdown/2022/10/04/aws-deployment.html",
             "date": " • Oct 4, 2022"
@@ -135,7 +135,7 @@
     
         ,"post12": {
             "title": "Markdown Table",
-            "content": "The Weeks Ahead . S.NO 9/5-9/9 9/12-9/16 9/19-9/23 Time . AP Physics | Unit 2 test | Start Unit 3 | Lab Week | 04 Oct 2022 | . Am Lit | Analyze poems | Create Poems | Recite Poems | - | . AP Calc AB | Unit 1 test | Start Unit 2 | Study for Unit 2 | - | . AP CSP | Creative Development | Frontend Development | Backend Development | - | .",
+            "content": "The Weeks Ahead . S.NO 9/5-9/9 9/12-9/16 9/19-9/23 Time . AP Physics | Unit 2 test | Start Unit 3 | Lab Week | 05 Oct 2022 | . Am Lit | Analyze poems | Create Poems | Recite Poems | - | . AP Calc AB | Unit 1 test | Start Unit 2 | Study for Unit 2 | - | . AP CSP | Creative Development | Frontend Development | Backend Development | - | .",
             "url": "https://kcabralomana.github.io/Fastpages/markdown/2022/09/05/markdown-table.html",
             "relUrl": "/markdown/2022/09/05/markdown-table.html",
             "date": " • Sep 5, 2022"
