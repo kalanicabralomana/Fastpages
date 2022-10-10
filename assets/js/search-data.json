@@ -292,6 +292,17 @@
 
   
       ,"page1": {
+          "title": "API",
+          "content": "API Implementation . LINK .",
+          "url": "https://kcabralomana.github.io/Fastpages/apisubmenu/",
+          "relUrl": "/apisubmenu/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
           "title": "Java Script",
           "content": "Jupyter Individual Design Elements . | JavaScript Usage | HTML fragments and JavaScript data to build a table | .",
           "url": "https://kcabralomana.github.io/Fastpages/javascript/",
@@ -302,7 +313,7 @@
   
 
   
-      ,"page2": {
+      ,"page3": {
           "title": "About Me",
           "content": "I am Kalani Cabral-Omana, I am a junior in Del Norte High School. I like to surf, play soccer and hang out with friends in my free time. . Follow me on GitHub: kcabralomana [^1]. .",
           "url": "https://kcabralomana.github.io/Fastpages/about/",
@@ -315,7 +326,7 @@
   
 
   
-      ,"page4": {
+      ,"page5": {
           "title": "Kalani's CSP notes",
           "content": "CSP Notes . Launching VSCode through WSL . PS C: Users kcabr&gt; wsl (base) kcabralomana@MSI:/mnt/c/Users/kcabr$ cd (base) kcabralomana@MSI:~$ ls Fastpages anaconda3 vscode vscode4 (base) kcabralomana@MSI:~$ cd Fastpages (base) kcabralomana@MSI:~/Fastpages$ code . . Vocabulary . Repository: The location on GitHub where we modify our fastpages and collect all the work. . Clone: copying a repository onto you own system for you to modify. . Commit: This means to save and commit changes in order for the changes to update on your site. . Procedural Abstraction: bit of code are written and are generalized by variable parameter .",
           "url": "https://kcabralomana.github.io/Fastpages/notes/",
@@ -347,7 +358,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kcabralomana.github.io/Fastpages/robots.txt",
