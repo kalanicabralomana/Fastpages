@@ -19,10 +19,10 @@ We decided to plan this by contributing on a google drawing to get an idea of ho
 - Users can view these quotes to find motivation and can like the quotes and share
 
 ## Data Abstraction
-- We will store users like patterns and users information in lists
+- We will store user data comments, like patterns and quotes.
 
 ## Managing Complexity
-- The program we will be creating will contain a list of specific users like and quotes that are essential to contain in out code segment
+- The program we will be creating lists to contain data to organize our data
 
 ## Procedural Abstraction
 - We will use different HTML templates for different views for the users
