@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Project Week 2 Planning",
-            "content": "The Plan . W .",
-            "url": "https://kcabralomana.github.io/Fastpages/markdown/2022/10/25/planning-pwk2.html",
-            "relUrl": "/markdown/2022/10/25/planning-pwk2.html",
+            "title": "Implement Quote and Like fetching",
+            "content": "Quote . Get new quote # generates random quote from dictionary . . # displays the new quote here . Like # when button pressed adds 1 to like total . N/A . # displays like total . Dislike # when button pressed adds 1 to dislike total . N/A . # displays dislike total .",
+            "url": "https://kcabralomana.github.io/Fastpages/markdown/2022/10/25/frontend-striver-wk2.html",
+            "relUrl": "/markdown/2022/10/25/frontend-striver-wk2.html",
             "date": " • Oct 25, 2022"
         }
         
@@ -234,7 +234,7 @@
     
         ,"post21": {
             "title": "Markdown Table",
-            "content": "The Weeks Ahead . S.NO 9/5-9/9 9/12-9/16 9/19-9/23 Time . AP Physics | Unit 2 test | Start Unit 3 | Lab Week | 27 Oct 2022 | . Am Lit | Analyze poems | Create Poems | Recite Poems | - | . AP Calc AB | Unit 1 test | Start Unit 2 | Study for Unit 2 | - | . AP CSP | Creative Development | Frontend Development | Backend Development | - | .",
+            "content": "The Weeks Ahead . S.NO 9/5-9/9 9/12-9/16 9/19-9/23 Time . AP Physics | Unit 2 test | Start Unit 3 | Lab Week | 28 Oct 2022 | . Am Lit | Analyze poems | Create Poems | Recite Poems | - | . AP Calc AB | Unit 1 test | Start Unit 2 | Study for Unit 2 | - | . AP CSP | Creative Development | Frontend Development | Backend Development | - | .",
             "url": "https://kcabralomana.github.io/Fastpages/markdown/2022/09/05/markdown-table.html",
             "relUrl": "/markdown/2022/09/05/markdown-table.html",
             "date": " • Sep 5, 2022"
