@@ -60,3 +60,5 @@ comments: true
         quote.innerHTML = currentQuote["quote"];
     };
 </script>
+
+
