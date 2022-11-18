@@ -22,4 +22,6 @@ title: Tools Check
 ![]({{site.baseurl}}/images/conda and nodejs.png "https://github.com/fastai/fastpages")
 - Screenshot showing the base or conda and the use of NodeJS, aswell as different version of python
 
-#
+# Javascript Markdown
+![]({{site.baseurl}}/images/binarymath.png "https://github.com/fastai/fastpages")
+- Screenshot displaying binary code that we were able to work in class, using javascript and markdown to put out this page in shich the lightbulbs light up and represent binary. Showcasing javascript and markdown tools

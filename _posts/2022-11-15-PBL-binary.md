@@ -15,7 +15,7 @@ type: pbl
 <!-- Hack 3: do your own thing -->
 
 <!-- liquid code , exists in coding enviroment, but transforms before it shows on the age, transforms in the actions of github when it builds the page-->
-{% assign BITS = 24 %}
+{% assign BITS = 8 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
