@@ -1,33 +1,10 @@
 ---
 toc: true
 layout: post
-description: Notes N@M
+description: Binary usage
 categories: [markdown, Final]
-title: Final Blog Post for N@M
+title: Binary usage
 ---
-
-# Project: Stiver
-
-We made Striver, a program that acts as a website where can view various motivational and inspirational quotes. Essentially our website operated like a social media site for motivation and self gain.
-
-![]({{site.baseurl}}/images/striver pic.png "https://github.com/fastai/fastpages")
-
-## Other Projects
-
-Scheduler
-![]({{site.baseurl}}/images/csp proj.png "https://github.com/fastai/fastpages")
-
-We viewed a different project called Scheduler, made by a group from the other P4 class. Their program helps user build a schedule and plan their future events for future reference
-
-## Art projects
-
-![]({{site.baseurl}}/images/art.png "https://github.com/fastai/fastpages")
-
-After presenting I walked around the other projects and found my way into the art room. I saw some really nice paintings and drawing and found this one really cool. I really liked the concept of global warming through the form of art.
-
-## Overall thoughts
-- I really enjoys N@M because we got to see all of our peers hard work and the excitement of being able to showcase our work
-
 
 <div class="container bg-primary">
     <form>
@@ -63,6 +40,7 @@ After presenting I walked around the other projects and found my way into the ar
             const final = binary.join('');  // converts array to string (for example, array may be 1,0,1,0,0 and a string is 10100)
             document.getElementById('binary').innerHTML = final;   // sends binary to html
         }
+        // moves the curser on textbox 
         document.getElementById("decimal").focus();
     }
 
