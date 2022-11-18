@@ -14,8 +14,8 @@ type: pbl
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
-
-{% assign BITS = 8 %}
+<!-- liquid code , exists in coding enviroment, but transforms before it shows on the age, transforms in the actions of github when it builds the page-->
+{% assign BITS = 24 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -48,6 +48,7 @@ type: pbl
             <table class="table">
             <tr>
                 {% comment %}Build many bits{% endcomment %}
+                <!-- iteration -->
                 {% for i in (0..bits) %}
                 <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
                     <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
@@ -66,6 +67,7 @@ type: pbl
 </div>
 
 <script>
+    // variable assignment
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
@@ -157,3 +159,6 @@ type: pbl
         }
     }
 </script>
+
+<!-- meta data (front matter) data about the data -->
+<!--  -->
