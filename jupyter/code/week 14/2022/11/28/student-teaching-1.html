@@ -342,14 +342,14 @@ window.onload = wrap_img;
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># Use a dictionary for the questions</span>
-<span class="n">quesList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Question1"</span><span class="p">,</span> <span class="s2">"Question2"</span><span class="p">,</span> <span class="s2">"Question3"</span><span class="p">,</span> <span class="s2">"Question4"</span><span class="p">]</span>
+<span class="n">quesList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"What high school do you attend?"</span><span class="p">,</span> <span class="s2">"What is Del Norte's Mascot?"</span><span class="p">,</span> <span class="s2">"What period was this lesson taught?"</span><span class="p">,</span> <span class="s2">"What student teaching day is this?"</span><span class="p">]</span>
 
 <span class="c1"># Use a dictionary for the correct solutions</span>
-<span class="n">soluList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Solution1"</span><span class="p">,</span> <span class="s2">"Solution2"</span><span class="p">,</span> <span class="s2">"Solution3"</span><span class="p">,</span> <span class="s2">"Solution4"</span><span class="p">]</span>
+<span class="n">soluList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Del Norte"</span><span class="p">,</span> <span class="s2">"NightHawk"</span><span class="p">,</span> <span class="s2">"Period 3"</span><span class="p">,</span> <span class="s2">"Day 1"</span><span class="p">]</span>
 
 <span class="n">quesAmount</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">quesList</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">quesCount</span> <span class="o">&lt;=</span> <span class="n">quesAmount</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">quesCount</span> <span class="o">&lt;</span> <span class="n">quesAmount</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">quesList</span><span class="p">[</span><span class="n">quesCount</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="k">if</span><span class="p">(</span><span class="n">guess</span> <span class="o">==</span> <span class="n">soluList</span><span class="p">[</span><span class="n">quesCount</span><span class="p">]):</span>
@@ -357,7 +357,10 @@ window.onload = wrap_img;
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct! Score: "</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span> 
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect! The correct answer was "</span> <span class="o">+</span> <span class="n">soluList</span><span class="p">[</span><span class="n">quesCount</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">quesCount</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">quesAmount</span><span class="p">)</span>
     <span class="n">quesCount</span> <span class="o">+=</span> <span class="mi">1</span>
+    
 </pre></div>
 
     </div>
@@ -370,36 +373,29 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Question1
+<pre>What high school do you attend?
 
 Correct! Score: 
-Question2
+0
+4
+What is Del Norte's Mascot?
+
+Incorrect! The correct answer was NightHawk
+
+1
+4
+What period was this lesson taught?
+
+Incorrect! The correct answer was Period 3
+
+2
+4
+What student teaching day is this?
 
 Correct! Score: 
-Question3
-
-Correct! Score: 
-Question4
-
-Correct! Score: 
+3
+4
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-11-28-student-teaching-1.ipynb Cell 7</span> in <span class="ansi-cyan-fg">&lt;cell line: 12&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-11-28-student-teaching-1.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> quesAmount= len(quesList)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-11-28-student-teaching-1.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> while quesCount &lt;= quesAmount:
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-11-28-student-teaching-1.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span>     print(quesList[quesCount] + "\n")
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-11-28-student-teaching-1.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span>     guess = input()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-11-28-student-teaching-1.ipynb#W6sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span>     if(guess == soluList[quesCount]):
-
-<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
 </div>
 </div>
 
