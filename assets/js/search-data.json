@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Title",
+            "title": "Day 3 HW",
             "content": "# Here is a python template for you to use. expired = False cost = 50 if(expired): print(&#39;this product is no good&#39;) else: if (cost &gt; 50): print(&#39;this product is too expensive&#39;) elif (cost &lt; 25): print(&#39;this is a cheap product&#39;) else: print(&#39;this is a regular product&#39;) . this is a regular product . questions = { &quot;Which letter is farthest left on the keyboard?&quot;:[&quot;a. L&quot;,&quot;b. U&quot;, &quot;c. S&quot;, &quot;d. N&quot;], &quot;Which company isn&#39;t a computer company?&quot;:[&quot;a. Apple&quot;, &quot;b. Lenovo&quot;,&quot;c. Nike&quot;, &quot;d. HP&quot;], &quot;What coding language do we mainly use in class?&quot;:[&quot;a. HTML&quot;,&quot;b. CSS&quot;, &quot;c. JavaScript&quot;, &quot;d. Python&quot;] } answers = { &quot;Which letter is farthest left on the keyboard?&quot;:&quot;c&quot;, &quot;Which company isn&#39;t a computer company?&quot;:&quot;c&quot;, &quot;What coding language do we mainly use in class?&quot;:&quot;d&quot; } score = 0 print(&quot;Ready for the computer quiz?&quot;) for q,a in questions.items(): print(q) print(*a) inp = input(&quot;Enter Your Answer&quot;) if(answers.get(q)==inp): score = score +1 else: print(&quot;Try again&quot;) break print(&#39;Final Score:&#39;, score) . Ready for the computer quiz? Which letter is farthest left on the keyboard? a. L b. U c. S d. N Which company isn&#39;t a computer company? a. Apple b. Lenovo c. Nike d. HP What coding language do we mainly use in class? a. HTML b. CSS c. JavaScript d. Python Final Score: 3 .",
-            "url": "https://kcabralomana.github.io/Fastpages/2022/12/05/day3hw.html",
-            "relUrl": "/2022/12/05/day3hw.html",
+            "url": "https://kcabralomana.github.io/Fastpages/jupyter/code/week%200/2022/12/05/day3hw.html",
+            "relUrl": "/jupyter/code/week%200/2022/12/05/day3hw.html",
             "date": " • Dec 5, 2022"
         }
         
