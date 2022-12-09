@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Day 3 HW/Notes | Kalani Cabral-Omana</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Day 3 HW/Notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://kcabralomana.github.io/Fastpages/jupyter/code/week%200/2022/12/06/day3hw.html" />
+<meta property="og:url" content="https://kcabralomana.github.io/Fastpages/jupyter/code/week%200/2022/12/06/day3hw.html" />
+<meta property="og:site_name" content="Kalani Cabral-Omana" />
+<meta property="og:image" content="https://kcabralomana.github.io/Fastpages/images/android-chrome-512x512" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-06T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://kcabralomana.github.io/Fastpages/images/android-chrome-512x512" />
+<meta property="twitter:title" content="Day 3 HW/Notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-06T00:00:00-06:00","datePublished":"2022-12-06T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Day 3 HW/Notes","image":"https://kcabralomana.github.io/Fastpages/images/android-chrome-512x512","mainEntityOfPage":{"@type":"WebPage","@id":"https://kcabralomana.github.io/Fastpages/jupyter/code/week%200/2022/12/06/day3hw.html"},"url":"https://kcabralomana.github.io/Fastpages/jupyter/code/week%200/2022/12/06/day3hw.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kcabralomana.github.io/Fastpages/feed.xml" title="Kalani Cabral-Omana" /><link rel="shortcut icon" type="image/x-icon" href="/Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Fastpages/">Kalani Cabral-Omana</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Fastpages/apisubmenu/">API</a><a class="page-link" href="/Fastpages/javascript/">Java Script</a><a class="page-link" href="/Fastpages/about/">About Me</a><a class="page-link" href="/Fastpages/notes/">Kalani&#39;s CSP notes</a><a class="page-link" href="/Fastpages/search/">Search</a><a class="page-link" href="/Fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Day 3 HW/Notes</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-06T00:00:00-06:00" itemprop="datePublished">
+        Dec 6, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Fastpages/categories/#jupyter">jupyter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Fastpages/categories/#Code">Code</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Fastpages/categories/#Week 0">Week 0</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/kcabralomana/Fastpages/tree/master/_notebooks/2022-12-5-day3hw.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/kcabralomana/Fastpages/master?filepath=_notebooks%2F2022-12-5-day3hw.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/kcabralomana/Fastpages/blob/master/_notebooks/2022-12-5-day3hw.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fkcabralomana%2FFastpages%2Fblob%2Fmaster%2F_notebooks%2F2022-12-5-day3hw.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-5-day3hw.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Boolean Expressions</p>
+<ul>
+<li>Boolean= A data type with two possible values: true or false</li>
+</ul>
+<p>Boolean and Binary</p>
+<ul>
+<li>Boolean math and binary notation both use the same two ciphers: 1 and 0</li>
+<li>Binary numbers may be composed of many bits adding up in place-weighted form to any finite value, or size</li>
+</ul>
+<p>KNOW</p>
+<ul>
+<li>A Boolean value is either TRUE or FALSE</li>
+</ul>
+<p>Logical Operators</p>
+<ul>
+<li>AND : returns TRUE if the operands around it are TRUE</li>
+<li>OR : returns TRUE if at least one operand is TRUE</li>
+<li>NOT : returns TRUE if the following boolean is FALSE</li>
+</ul>
+<p>Conditionals</p>
+<ul>
+<li>Selection: uses a condition that evaluates to true or false</li>
+<li>Algorithm is a finite set of instructions that accomplish a specific task</li>
+</ul>
+<p>Nested Conditionals</p>
+<ul>
+<li>statements consisting of conditional statements within other conditional statements</li>
+<li>Utilizes "if else" statements within "if else" statements</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One in Python</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="err">#</span> <span class="nx">Here</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">python</span> <span class="nx">template</span> <span class="k">for</span> <span class="nx">you</span> <span class="nx">to</span> <span class="nx">use</span><span class="p">.</span>
+
+<span class="nx">expired</span> <span class="o">=</span> <span class="nx">False</span>
+<span class="nx">cost</span> <span class="o">=</span> <span class="mf">50</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nx">expired</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s1">'this product is no good'</span><span class="p">)</span>
+<span class="k">else</span><span class="o">:</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">cost</span> <span class="o">&gt;</span> <span class="mf">50</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s1">'this product is too expensive'</span><span class="p">)</span>
+    <span class="nx">elif</span> <span class="p">(</span><span class="nx">cost</span> <span class="o">&lt;</span> <span class="mf">25</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s1">'this is a cheap product'</span><span class="p">)</span>
+    <span class="k">else</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s1">'this is a regular product'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>this is a regular product
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One in JavaScript</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">product</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"expired"</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span> <span class="s2">"cost"</span><span class="o">:</span><span class="mf">10</span><span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">product</span><span class="p">[</span><span class="s2">"expired"</span><span class="p">]</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"This product is no good!!!!!!!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">product</span><span class="p">[</span><span class="s2">"cost"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">50</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"THis product is too expensive!11111"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">product</span><span class="p">[</span><span class="s2">"cost"</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">25</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"this product normal"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"cheap"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>cheap
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">questions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Which letter is farthest left on the keyboard?"</span><span class="o">:</span><span class="p">[</span><span class="s2">"a. L"</span><span class="p">,</span><span class="s2">"b. U"</span><span class="p">,</span> <span class="s2">"c. S"</span><span class="p">,</span> <span class="s2">"d. N"</span><span class="p">],</span> 
+    <span class="s2">"Which company isn't a computer company?"</span><span class="o">:</span><span class="p">[</span><span class="s2">"a. Apple"</span><span class="p">,</span> <span class="s2">"b. Lenovo"</span><span class="p">,</span><span class="s2">"c. Nike"</span><span class="p">,</span> <span class="s2">"d. HP"</span><span class="p">],</span> 
+    <span class="s2">"What coding language do we mainly use in class?"</span><span class="o">:</span><span class="p">[</span><span class="s2">"a. HTML"</span><span class="p">,</span><span class="s2">"b. CSS"</span><span class="p">,</span> <span class="s2">"c. JavaScript"</span><span class="p">,</span> <span class="s2">"d. Python"</span><span class="p">]</span>
+    <span class="p">}</span>
+
+<span class="nx">answers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Which letter is farthest left on the keyboard?"</span><span class="o">:</span><span class="s2">"c"</span><span class="p">,</span> 
+    <span class="s2">"Which company isn't a computer company?"</span><span class="o">:</span><span class="s2">"c"</span><span class="p">,</span> 
+    <span class="s2">"What coding language do we mainly use in class?"</span><span class="o">:</span><span class="s2">"d"</span>
+    <span class="p">}</span>
+
+<span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s2">"Ready for the computer quiz?"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="nx">q</span><span class="p">,</span><span class="nx">a</span> <span class="k">in</span> <span class="nx">questions</span><span class="p">.</span><span class="nx">items</span><span class="p">()</span><span class="o">:</span>
+
+    <span class="nx">print</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span>
+    <span class="nx">print</span><span class="p">(</span><span class="o">*</span><span class="nx">a</span><span class="p">)</span>
+
+    <span class="nx">inp</span> <span class="o">=</span> <span class="nx">input</span><span class="p">(</span><span class="s2">"Enter Your Answer"</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="nx">answers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span><span class="o">==</span><span class="nx">inp</span><span class="p">)</span><span class="o">:</span>
+        <span class="nx">score</span> <span class="o">=</span> <span class="nx">score</span> <span class="o">+</span><span class="mf">1</span>
+    <span class="k">else</span><span class="o">:</span>
+        <span class="nx">print</span><span class="p">(</span><span class="s2">"Try again"</span><span class="p">)</span>
+        <span class="k">break</span>
+
+<span class="nx">print</span><span class="p">(</span><span class="s1">'Final Score:'</span><span class="p">,</span> <span class="nx">score</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ready for the computer quiz?
+Which letter is farthest left on the keyboard?
+a. L b. U c. S d. N
+Which company isn't a computer company?
+a. Apple b. Lenovo c. Nike d. HP
+What coding language do we mainly use in class?
+a. HTML b. CSS c. JavaScript d. Python
+Final Score: 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="kcabralomana/Fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Fastpages/jupyter/code/week%200/2022/12/06/day3hw.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Fastpages/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
