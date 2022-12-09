@@ -104,6 +104,44 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>grape
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;alfa&quot;</span><span class="p">,</span> <span class="s2">&quot;bravo&quot;</span><span class="p">,</span> <span class="s2">&quot;charlie&quot;</span><span class="p">,</span> <span class="s2">&quot;delta&quot;</span><span class="p">,</span> <span class="s2">&quot;echo&quot;</span><span class="p">,</span> <span class="s2">&quot;foxtrot&quot;</span><span class="p">,</span> <span class="s2">&quot;golf&quot;</span><span class="p">,</span> <span class="s2">&quot;hotel&quot;</span><span class="p">,</span> <span class="s2">&quot;india&quot;</span><span class="p">,</span> <span class="s2">&quot;juliett&quot;</span><span class="p">,</span> <span class="s2">&quot;kilo&quot;</span><span class="p">,</span>
+<span class="s2">&quot;lima&quot;</span><span class="p">,</span> <span class="s2">&quot;mike&quot;</span><span class="p">,</span> <span class="s2">&quot;november&quot;</span><span class="p">,</span> <span class="s2">&quot;oscar&quot;</span><span class="p">,</span> <span class="s2">&quot;papa&quot;</span><span class="p">,</span> <span class="s2">&quot;quebec&quot;</span><span class="p">,</span> <span class="s2">&quot;romeo&quot;</span><span class="p">,</span> <span class="s2">&quot;sierra&quot;</span><span class="p">,</span> <span class="s2">&quot;tango&quot;</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span><span class="p">,</span> <span class="s2">&quot;victor&quot;</span><span class="p">,</span> <span class="s2">&quot;whiskey&quot;</span><span class="p">,</span> <span class="s2">&quot;xray&quot;</span><span class="p">,</span> <span class="s2">&quot;yankee&quot;</span><span class="p">,</span> <span class="s2">&quot;zulu&quot;</span><span class="p">]</span>
+
+<span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;j&quot;</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">]</span>
+
+
+
+<span class="n">inp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -168,16 +206,6 @@ layout: notebook
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Try-this">Try this<a class="anchor-link" href="#Try-this"> </a></h3><ul>
-<li>Determine the output of the code segment</li>
-</ul>
-<p><img src="/Fastpages/images/copied_from_nb/../images/sudocode.png" alt="pc"></p>
-
-</div>
-</div>
-</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -185,14 +213,10 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">evenlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">]</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">i</span>
-<span class="k">while</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">21</span><span class="p">:</span>
-    <span class="n">evenlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=+</span> <span class="mi">1</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">evenlist</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sports</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;football&quot;</span><span class="p">,</span> <span class="s2">&quot;soccer&quot;</span><span class="p">,</span> <span class="s2">&quot;baseball&quot;</span><span class="p">,</span> <span class="s2">&quot;basketball&quot;</span><span class="p">]</span>
+<span class="n">sports</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;hockey&quot;</span>
+<span class="c1"># change the value &quot;soccer&quot; to &quot;hockey&quot;</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sports</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -204,18 +228,9 @@ layout: notebook
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-12-5-lists-lesson.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 4&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-5-lists-lesson.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span> x = 2 * i
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-5-lists-lesson.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> while 1 &lt; 21:
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-5-lists-lesson.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span>     evenlist.append(x)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-5-lists-lesson.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     i =+ 1
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-5-lists-lesson.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> print(evenlist)
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;football&#39;, &#39;hockey&#39;, &#39;baseball&#39;, &#39;basketball&#39;]
+</pre>
 </div>
 </div>
 
@@ -225,6 +240,36 @@ layout: notebook
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sports</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;football&quot;</span><span class="p">,</span> <span class="s2">&quot;soccer&quot;</span><span class="p">,</span> <span class="s2">&quot;baseball&quot;</span><span class="p">,</span> <span class="s2">&quot;basketball&quot;</span><span class="p">]</span>
+
+<span class="c1"># add &quot;golf&quot; as the 3rd element in the list</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sports</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Try-this">Try this<a class="anchor-link" href="#Try-this"> </a></h3><ul>
+<li>Determine the output of the code segment</li>
+</ul>
+<p><img src="/Fastpages/images/copied_from_nb/../images/sudocode.png" alt="pc"></p>
+
+</div>
+</div>
+</div>
 </div>
  
 
