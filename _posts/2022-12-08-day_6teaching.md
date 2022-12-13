@@ -249,13 +249,13 @@ What do you think the advantage of the code segment on the left is?</p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">infoDb</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="n">infoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="s2">&quot;Pristine&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="s2">&quot;Pure, clean&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="s2">&quot;Osmosis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="s2">&quot;process of molecules transferring through the memebrane of a cell&quot;</span><span class="p">,</span>
 <span class="p">})</span>
 
 <span class="n">infoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="s2">&quot;Expiation&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="s2">&quot;Atonement&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="s2">&quot;derivative&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="s2">&quot;the rate of change of a function with respect to a variable&quot;</span><span class="p">,</span>
 <span class="p">})</span>
 
 <span class="k">def</span> <span class="nf">print_data2</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span> <span class="c1">#formatting</span>
@@ -326,15 +326,12 @@ What do you think the advantage of the code segment on the left is?</p>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Come back again!
-Total Number of Words:  3
-Word: Pristine
-	 Definition: Pure, clean
+Total Number of Words:  2
+Word: Osmosis
+	 Definition: process of molecules transferring through the memebrane of a cell
 
-Word: Expiation
-	 Definition: Atonement
-
-Word: algorithm
-	 Definition: set of instructions to follow to complete a task
+Word: derivative
+	 Definition: the rate of change of a function with respect to a variable
 
 </pre>
 </div>
