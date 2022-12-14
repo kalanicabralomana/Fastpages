@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Week 2 Review
+description: Speaker Panel
 categories: [markdown]
 title: Compsci/Technical Business Panel
 ---
