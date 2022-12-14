@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -449,6 +449,194 @@ PROCEDURE Dice(n)
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Function to generate n random numbers and sort them into even and odd lists</span>
+<span class="k">def</span> <span class="nf">sort_numbers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="c1"># Generate n random numbers</span>
+  <span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+
+  <span class="c1"># Sort numbers into even and odd lists</span>
+  <span class="n">even</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">odd</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">even</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">odd</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">even</span><span class="p">,</span> <span class="n">odd</span>
+
+<span class="c1"># Generate 10 random numbers and sort them into even and odd lists</span>
+<span class="n">even</span><span class="p">,</span> <span class="n">odd</span> <span class="o">=</span> <span class="n">sort_numbers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Print even and odd lists</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Even numbers: "</span><span class="p">,</span> <span class="n">even</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Odd numbers: "</span><span class="p">,</span> <span class="n">odd</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Even numbers:  [62, 20, 82, 8, 92]
+Odd numbers:  [83, 69, 81, 73, 25]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Define polynomial 2x^5 - 6x^2 + 24x</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Calculate derivative</span>
+<span class="n">deriv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyder</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The derivative of 2x^5 - 6x^2 + 24x is: "</span><span class="p">,</span> <span class="n">deriv</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The derivative of 2x^5 - 6x^2 + 24x is:  [  8   0 -12  24]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Define polynomial (13x^4 + 4x^2) / 2</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Calculate derivative</span>
+<span class="n">deriv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyder</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span>
+
+<span class="c1"># Evaluate derivative at x = 9</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">deriv</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"The derivative of (13x^4 + 4x^2) / 2 when x = 9 is: "</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2022-12-12-day_7teaching.ipynb Cell 13</span> in <span class="ansi-cyan-fg">&lt;cell line: 10&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-12-day_7teaching.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> deriv = np.polyder(poly)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-12-day_7teaching.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> # Evaluate derivative at x = 9
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-12-day_7teaching.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> result = deriv(9)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2022-12-12-day_7teaching.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> print("The derivative of (13x^4 + 4x^2) / 2 when x = 9 is: ", result)
+
+<span class="ansi-red-fg">TypeError</span>: 'numpy.ndarray' object is not callable</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Create a list of dogs and cats</span>
+<span class="n">dogs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Max"</span><span class="p">,</span> <span class="s2">"Buddy"</span><span class="p">,</span> <span class="s2">"Charlie"</span><span class="p">,</span> <span class="s2">"Rocky"</span><span class="p">,</span> <span class="s2">"Daisy"</span><span class="p">,</span> <span class="s2">"Lucy"</span><span class="p">,</span> <span class="s2">"Sadie"</span><span class="p">,</span> <span class="s2">"Molly"</span><span class="p">,</span> <span class="s2">"Roxy"</span><span class="p">,</span> <span class="s2">"Zeus"</span><span class="p">]</span>
+<span class="n">cats</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Simba"</span><span class="p">,</span> <span class="s2">"Mittens"</span><span class="p">,</span> <span class="s2">"Oliver"</span><span class="p">,</span> <span class="s2">"Tiger"</span><span class="p">,</span> <span class="s2">"Lily"</span><span class="p">,</span> <span class="s2">"Kitty"</span><span class="p">,</span> <span class="s2">"Missy"</span><span class="p">,</span> <span class="s2">"Smokey"</span><span class="p">,</span> <span class="s2">"Socks"</span><span class="p">,</span> <span class="s2">"Boots"</span><span class="p">]</span>
+
+<span class="c1"># Create a list of the combined dogs and cats</span>
+<span class="n">animals</span> <span class="o">=</span> <span class="n">dogs</span> <span class="o">+</span> <span class="n">cats</span>
+
+<span class="c1"># Use the random.shuffle() function to shuffle the list of animals into a random order</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">animals</span><span class="p">)</span>
+
+<span class="c1"># Print the shuffled list of animals</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animals</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Zeus', 'Charlie', 'Boots', 'Mittens', 'Lucy', 'Roxy', 'Lily', 'Buddy', 'Socks', 'Daisy', 'Kitty', 'Oliver', 'Rocky', 'Missy', 'Smokey', 'Tiger', 'Sadie', 'Simba', 'Molly', 'Max']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
