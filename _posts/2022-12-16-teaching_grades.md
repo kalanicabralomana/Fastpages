@@ -37,10 +37,10 @@ title: Grades from teaching hw
 
 [3.16](https://kalanicabralomana.github.io/Fastpages/code/2022/12/15/3.16hw.html)
 
-[3.17-18]
+[3.17-18](https://kalanicabralomana.github.io/Fastpages/lesson)
 
 ### Vocab
 
-[Unit 2]
+[Unit 2](https://kalanicabralomana.github.io/Fastpages/markdown/2022/12/09/vocab.html)
 
 [Unit 3]
