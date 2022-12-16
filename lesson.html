@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      11 min read
     
 </span></p>
 
@@ -436,6 +436,14 @@ False
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The first graph appears to be more linear, whereas the second appears to be a logn graph. The linear graph is always increasing, meaning that the bigger your number is, the longer it takes to identify your number. However, in the second graph, while the curve does increase, it increases slower than the linear one. This means that as the range of a list of numbers increases, the linear graph shows a steeper increase in time than the logn graph. As a result, lists with more numbers will take less time for the logn graph than for the linear graph because the logn graph increases time in very small increments. As a result, the second graph is more efficient. Furthermore, the first graph's points are calculated using linear search, which iterates through each number in the list one by one until the number is identified. The points in the second graph, on the other hand, are calculated using binary search. Binary search divides the list in half each time, and this process is repeated until your number is found. As a result, because binary search is much faster than linear search, the second graph is much more efficient.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -463,7 +471,7 @@ False
 
 <span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10001</span><span class="p">))</span> <span class="c1"># list with numbers 1-10000</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5000</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">9000</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
 
 <span class="n">linear_search</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># runs procedure</span>
 </pre></div>
@@ -472,9 +480,32 @@ False
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Found element after 9000 loops in 501 microseconds
+Your number was found at 8999
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/Fastpages/images/copied_from_nb/../images/firstgraph.png" alt="pc"></p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -515,7 +546,7 @@ False
 
 <span class="n">lt</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10001</span><span class="p">))</span> <span class="c1"># list with numbers 1-10000</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">149</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">9000</span> <span class="c1"># replace with an integer between 1 and 10000 (I suggest big numbers like 500, 2000, so on)</span>
 
 <span class="n">binary_search</span><span class="p">(</span><span class="n">lt</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># runs procedure</span>
 </pre></div>
@@ -524,9 +555,41 @@ False
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Element found after 12 loops in 6 microseconds
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8999</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/Fastpages/images/copied_from_nb/../images/2ndgraph.png" alt="pc"></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
