@@ -6,6 +6,9 @@ categories: [markdown]
 title: Grades from teaching hw
 ---
 
+
+## Grades
+
 | Lesson | Grade | Total
 |-|-|-|
 |3.1-2| .95 |-|
