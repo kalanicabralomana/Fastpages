@@ -9,7 +9,7 @@ title: Grades from teaching hw
 
 ## Grades
 
-| Lesson | Grade | Total
+| Lesson | Grade | Total |
 |-|-|-|
 |Day 1 teaching: 3.1-2| 0.95 |-|
 |Day 2 teaching: 3.3-4| 0.9 |-|
