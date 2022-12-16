@@ -19,7 +19,7 @@ title: Grades from teaching hw
 |3.17-18| - |
 |Total so far| 5.45 |
 
-### Notes and HW from each lesson
+## Notes and HW from each lesson
 
 [3.1-2](https://kalanicabralomana.github.io/Fastpages/markdown/final/2022/11/28/week-14-monday.html)
 
@@ -39,8 +39,8 @@ title: Grades from teaching hw
 
 [3.17-18](https://kalanicabralomana.github.io/Fastpages/lesson)
 
-### Vocab
+## Vocab
 
 [Unit 2](https://kalanicabralomana.github.io/Fastpages/markdown/2022/12/09/vocab.html)
 
-[Unit 3]
+[Unit 3]()
