@@ -15,8 +15,8 @@ title: Grades from teaching hw
 |3.9-11| .9 |-|
 |3.12-13| .85 |-|
 |3.14-15| .9 |-|
-|3.16| - |-|
-|3.17-18| - |-|
+|3.16| N/A |-|
+|3.17-18| N/A |-|
 |ALL LESSONS| - |-|
 
 ## Notes and HW from each lesson
