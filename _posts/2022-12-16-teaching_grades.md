@@ -20,7 +20,7 @@ title: Grades from teaching hw
 |Day 7 teaching: 3.14-15| 0.9 |-|
 |Day 8 teaching: 3.16| N/A |-|
 |Day 9 teaching: 3.17-18| N/A |-|
-|ALL LESSONS| - |N/A of 9|
+|ALL LESSONS| - |N/A of 8|
 
 ## Notes and HW from each lesson
 
