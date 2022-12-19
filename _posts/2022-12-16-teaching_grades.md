@@ -16,11 +16,11 @@ title: Grades from teaching hw
 |Day 3 teaching: 3.5-7| 0.95 |-|
 |Day 4 teaching: 3.8-10| PRESENTED |-|
 |Day 5 teaching: 3.9-11| 0.9 |-|
-|Day 6 teaching: 3.12-13| 0.85 |-|
+|Day 6 teaching: 3.12-13| 0.9 |-|
 |Day 7 teaching: 3.14-15| 0.9 |-|
-|Day 8 teaching: 3.16| N/A |-|
-|Day 9 teaching: 3.17-18| N/A |-|
-|ALL LESSONS| - |N/A of 8|
+|Day 8 teaching: 3.16| 0.85 |-|
+|Day 9 teaching: 3.17-18| 0.9 |-|
+| TOTAL | - |7.25|
 
 ## Notes and HW from each lesson
 
