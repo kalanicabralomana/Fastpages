@@ -246,73 +246,22 @@ What do you think the advantage of the code segment on the left is?</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">infoDb</span> <span class="o">=</span> <span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">grade_needed</span><span class="p">(</span><span class="n">current_grade</span><span class="p">,</span> <span class="n">final_grade_weight</span><span class="p">,</span> <span class="n">desired_grade</span><span class="p">):</span>
 
-<span class="n">infoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="s2">&quot;Osmosis&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="s2">&quot;process of molecules transferring through the memebrane of a cell&quot;</span><span class="p">,</span>
-<span class="p">})</span>
+  <span class="n">current_grade</span> <span class="o">/=</span> <span class="mi">100</span>
+  <span class="n">final_grade_weight</span> <span class="o">/=</span> <span class="mi">100</span>
+  <span class="n">desired_grade</span> <span class="o">/=</span> <span class="mi">100</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">desired_grade</span> <span class="o">-</span> <span class="n">current_grade</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">final_grade_weight</span><span class="p">))</span> <span class="o">/</span> <span class="n">final_grade_weight</span>
 
-<span class="n">infoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-    <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="s2">&quot;derivative&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="s2">&quot;the rate of change of a function with respect to a variable&quot;</span><span class="p">,</span>
-<span class="p">})</span>
+<span class="n">current_grade</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your current grade as a percentage: &quot;</span><span class="p">))</span>
+<span class="n">final_grade_weight</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the weight of the final exam as a percentage: &quot;</span><span class="p">))</span>
+<span class="n">desired_grade</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your desired overall grade as a percentage: &quot;</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">print_data2</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span> <span class="c1">#formatting</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word:&quot;</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;Word&quot;</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Definition:&quot;</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">&quot;Definition&quot;</span><span class="p">])</span> <span class="c1"># \t is a tab indent</span>
-    <span class="nb">print</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">data_entry</span><span class="p">():</span> <span class="c1">#defining the function that asks for user input</span>
-    <span class="n">Word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What vocab word would you like to save in the database?&quot;</span><span class="p">)</span>
-    <span class="n">Definition</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the definition of the vocab word?&quot;</span><span class="p">)</span>
-
-    <span class="n">infoDb</span><span class="o">.</span><span class="n">append</span><span class="p">({</span> <span class="c1">#appends the user input to the dictionary</span>
-        <span class="s2">&quot;Word&quot;</span><span class="p">:</span> <span class="n">Word</span><span class="p">,</span>
-        <span class="s2">&quot;Definition&quot;</span><span class="p">:</span> <span class="n">Definition</span><span class="p">,</span>
-   
-    <span class="p">})</span>
-
-<span class="k">def</span> <span class="nf">search_data</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">infoDb</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">record</span><span class="p">[</span><span class="s2">&quot;Word&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">word</span><span class="p">:</span> <span class="c1">#compares the already existing word to the word inputted with the word variable</span>
-            <span class="k">return</span> <span class="n">record</span>
-
-    <span class="k">return</span> <span class="n">NULL</span>
-
-<span class="k">def</span> <span class="nf">data_delete</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-    <span class="n">record</span> <span class="o">=</span> <span class="n">search_data</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="c1">#defines record as the word inputted with the search function</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">record</span> <span class="o">!=</span> <span class="n">NULL</span><span class="p">):</span> <span class="c1">#if the record doesn&#39;t equal null (does it exist?) then the next line removes it</span>
-        <span class="n">infoDb</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="s2">&quot;has been deleted!&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Record not found!&quot;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">Continue</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1">#defining continue as true</span>
-    <span class="k">while</span> <span class="n">Continue</span><span class="p">:</span>
-        <span class="n">lol</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to do (add/search/delete, type no if you want to exit)?&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">lol</span> <span class="o">==</span> <span class="s2">&quot;no&quot;</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Come back again!&quot;</span><span class="p">)</span>
-            <span class="n">Continue</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="k">elif</span> <span class="n">lol</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
-            <span class="n">data_entry</span><span class="p">()</span>
-        <span class="k">elif</span> <span class="n">lol</span> <span class="o">==</span> <span class="s2">&quot;search&quot;</span><span class="p">:</span>
-            <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What word do you want to search?&quot;</span><span class="p">)</span>
-            <span class="n">record</span> <span class="o">=</span> <span class="n">search_data</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="c1">#defines record as the input &quot;word&quot; and runs it through the search function</span>
-            <span class="n">print_data2</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">lol</span> <span class="o">==</span> <span class="s2">&quot;delete&quot;</span><span class="p">:</span>
-            <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What word do you want to delete&quot;</span><span class="p">)</span>
-            <span class="n">data_delete</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Please try again&quot;</span><span class="p">)</span>
-
-    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">infoDb</span><span class="p">)</span> <span class="c1">#defines length as the number of records</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Number of Words: &quot;</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span> 
-    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">infoDb</span><span class="p">:</span>
-            <span class="n">print_data2</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
- 
-<span class="n">main</span><span class="p">()</span>
+<span class="n">grade_needed</span> <span class="o">=</span> <span class="n">grade_needed</span><span class="p">(</span><span class="n">current_grade</span><span class="p">,</span> <span class="n">final_grade_weight</span><span class="p">,</span> <span class="n">desired_grade</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your current grade is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current_grade</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The final exam weight is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">final_grade_weight</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your desired grade is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">desired_grade</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You need to get a grade of </span><span class="si">{</span><span class="n">grade_needed</span> <span class="o">*</span> <span class="mi">100</span><span class="si">}</span><span class="s2">% on the final exam.&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -325,14 +274,10 @@ What do you think the advantage of the code segment on the left is?</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Come back again!
-Total Number of Words:  2
-Word: Osmosis
-	 Definition: process of molecules transferring through the memebrane of a cell
-
-Word: derivative
-	 Definition: the rate of change of a function with respect to a variable
-
+<pre>Your current grade is: 98.0
+The final exam weight is: 20.0
+Your desired grade is: 90.0
+You need to get a grade of 57.99999999999999% on the final exam.
 </pre>
 </div>
 </div>

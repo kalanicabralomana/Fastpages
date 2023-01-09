@@ -154,21 +154,6 @@ layout: notebook
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0.5
-1.225
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -235,6 +220,281 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  242 Turns
+The Man Has Made It Home After  1104 Turns
+The Man Has Made It Home After  8 Turns
+The Man Has Made It Home After  252 Turns
+The Man Has Made It Home After  72 Turns
+The Man Has Made It Home After  6 Turns
+( -433 -177 )
+( -980 352 )
+( -2076 644 )
+( -2967 1767 )
+( -1860 418 )
+( -3097 701 )
+( -3413 1203 )
+( -2200 1040 )
+( -3453 -323 )
+( -3768 -650 )
+Caped
+The Man Has Made It Home After  66 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  6 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  26 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  3226 Turns
+( -2003 -1571 )
+( -1772 572 )
+( -1920 64 )
+( -2421 283 )
+( -2743 -387 )
+( -2816 -1574 )
+( -2482 -1758 )
+( -2345 -1217 )
+( -2839 -1531 )
+( -3143 -2673 )
+Caped
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  38 Turns
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  2 Turns
+( 152 -36 )
+( -886 758 )
+( -1492 254 )
+( -1674 506 )
+( -1742 -260 )
+( -1527 1071 )
+( -1778 1190 )
+( -2104 1398 )
+( -3419 2061 )
+( -3453 2199 )
+Caped
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  196 Turns
+The Man Has Made It Home After  24 Turns
+The Man Has Made It Home After  43918 Turns
+The Man Has Made It Home After  3250 Turns
+The Man Has Made It Home After  10 Turns
+( 260 -302 )
+The Man Has Made It Home After  1435704 Turns
+The Man Has Made It Home After  8 Turns
+The Man Has Made It Home After  12 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  9576 Turns
+The Man Has Made It Home After  6 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  34 Turns
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  4826 Turns
+( 420 952 )
+( -181 1257 )
+( -549 1561 )
+( -837 1731 )
+( -1647 751 )
+( -1994 1794 )
+( -1643 2657 )
+( -1793 3483 )
+( -1296 3288 )
+( -1046 3224 )
+Caped
+( 515 301 )
+( 398 702 )
+( 1403 1239 )
+( 1704 1474 )
+( 2642 1146 )
+( 2893 2009 )
+( 2974 2422 )
+( 3010 2506 )
+( 3321 2619 )
+( 3051 2213 )
+Caped
+( 276 -96 )
+( 568 40 )
+( -452 208 )
+( -703 -499 )
+( -900 -950 )
+( -877 -229 )
+( -1173 -469 )
+( -297 -237 )
+The Man Has Made It Home After  8474140 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  6 Turns
+The Man Has Made It Home After  2 Turns
+( 332 -268 )
+( -579 -1183 )
+( 921 -1685 )
+( 1338 -1394 )
+( 1207 -2007 )
+( 1160 -2348 )
+( 530 -3690 )
+( 1903 -3183 )
+( 445 -3119 )
+( -753 -3789 )
+Caped
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  230 Turns
+( -949 -577 )
+( -1917 325 )
+( -446 440 )
+( 278 502 )
+( -922 382 )
+( -419 -1627 )
+( -682 -912 )
+( -1997 -413 )
+( -192 -830 )
+( 309 -1177 )
+Caped
+The Man Has Made It Home After  98 Turns
+The Man Has Made It Home After  22 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  94464 Turns
+The Man Has Made It Home After  14 Turns
+The Man Has Made It Home After  6902 Turns
+The Man Has Made It Home After  4 Turns
+( 140 -572 )
+( -102 114 )
+The Man Has Made It Home After  2933872 Turns
+The Man Has Made It Home After  2 Turns
+( 462 1596 )
+( 299 807 )
+( -629 373 )
+( -1554 -398 )
+( -1197 -229 )
+( -1638 412 )
+( -1445 431 )
+( -1756 694 )
+( -652 342 )
+( -524 268 )
+Caped
+( 80 578 )
+( -843 715 )
+( -1059 101 )
+( -885 743 )
+( -113 721 )
+( -1565 1535 )
+( -2254 688 )
+( -2469 965 )
+( -4008 824 )
+( -3755 1215 )
+Caped
+( -191 -2153 )
+( -104 -1092 )
+( -72 -940 )
+( 774 -1536 )
+( 88 -1348 )
+( -1247 -341 )
+( -944 146 )
+( -1594 112 )
+( -2059 469 )
+( -819 1035 )
+Caped
+( 75 -1345 )
+( -530 -712 )
+( -1646 -1282 )
+( -2029 -1435 )
+( -599 -1973 )
+( -23 -1863 )
+( -1300 -2174 )
+( -1740 -2608 )
+( -1996 -1472 )
+( -1862 -1522 )
+Caped
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  784 Turns
+( -1587 -1415 )
+( -1254 -1516 )
+( -1589 -1551 )
+( -1695 -2047 )
+( -2194 -1582 )
+( -2952 -2630 )
+( -3136 -3426 )
+( -2622 -2648 )
+( -2640 -2884 )
+( -2657 -2695 )
+Caped
+The Man Has Made It Home After  78 Turns
+The Man Has Made It Home After  322148 Turns
+The Man Has Made It Home After  32396 Turns
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  54 Turns
+The Man Has Made It Home After  916 Turns
+The Man Has Made It Home After  18 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  6 Turns
+The Man Has Made It Home After  30 Turns
+The Man Has Made It Home After  226 Turns
+The Man Has Made It Home After  32 Turns
+The Man Has Made It Home After  26 Turns
+( -393 -257 )
+( -847 -119 )
+( -1387 -783 )
+( -2900 130 )
+( -1599 -77 )
+( -219 -625 )
+( -871 -747 )
+( -1722 -556 )
+( -1682 -822 )
+( 155 -787 )
+Caped
+( 278 -482 )
+( 812 -444 )
+( 1309 -1241 )
+( 1620 -1882 )
+( 628 -1866 )
+( 827 -2755 )
+( -78 -2066 )
+( -552 -1990 )
+( -870 -822 )
+( -247 181 )
+Caped
+The Man Has Made It Home After  44 Turns
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  12 Turns
+The Man Has Made It Home After  12 Turns
+The Man Has Made It Home After  8 Turns
+( 230 1074 )
+( 648 -330 )
+( 826 -446 )
+( 1185 -1139 )
+( 987 -61 )
+( 1461 53 )
+( 2394 -1044 )
+( 1977 -2261 )
+( 2329 -1317 )
+( 1306 -2010 )
+Caped
+The Man Has Made It Home After  7158 Turns
+The Man Has Made It Home After  6 Turns
+The Man Has Made It Home After  4 Turns
+The Man Has Made It Home After  10 Turns
+The Man Has Made It Home After  6 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  2 Turns
+The Man Has Made It Home After  666 Turns
+Avaerage 157377.3411764706 Ones that when&#39;t too long  15
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -321,6 +581,106 @@ layout: notebook
 </ul>
 <p>AND</p>
 <p>Find an example of a simulation in a software/game you use, screenshot, and explain how it is a simulation</p>
+<p>Running the sims make it slow to commit</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sim-#1-updates-2-variables-by-a-random-amount-at-each-iteration-(runs-for-100-iterations)">Sim #1 updates 2 variables by a random amount at each iteration (runs for 100 iterations)<a class="anchor-link" href="#Sim-#1-updates-2-variables-by-a-random-amount-at-each-iteration-(runs-for-100-iterations)"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Define the number of iterations</span>
+<span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Set the initial values of the variables</span>
+<span class="n">value_1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">value_2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Define the update function</span>
+<span class="k">def</span> <span class="nf">update_values</span><span class="p">():</span>
+  <span class="k">global</span> <span class="n">value_1</span>
+  <span class="k">global</span> <span class="n">value_2</span>
+  <span class="n">value_1</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="n">value_2</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Run the simulation for the specified number of iterations</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">):</span>
+  <span class="n">update_values</span><span class="p">()</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iteration </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: value_1 = </span><span class="si">{</span><span class="n">value_1</span><span class="si">}</span><span class="s2">, value_2 = </span><span class="si">{</span><span class="n">value_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sim-#2-an-object-falling-under-the-influence-of-gravity">Sim #2 an object falling under the influence of gravity<a class="anchor-link" href="#Sim-#2-an-object-falling-under-the-influence-of-gravity"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the initial conditions</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.8</span>
+
+<span class="c1"># Set the time step and number of iterations</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Define the update function</span>
+<span class="k">def</span> <span class="nf">update_position</span><span class="p">():</span>
+  <span class="k">global</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">vx</span><span class="p">,</span> <span class="n">vy</span>
+  <span class="n">x</span> <span class="o">+=</span> <span class="n">vx</span> <span class="o">*</span> <span class="n">dt</span>
+  <span class="n">y</span> <span class="o">+=</span> <span class="n">vy</span> <span class="o">*</span> <span class="n">dt</span>
+  <span class="n">vy</span> <span class="o">-=</span> <span class="n">g</span> <span class="o">*</span> <span class="n">dt</span>
+
+<span class="c1"># Run the simulation for the specified number of iterations</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iterations</span><span class="p">):</span>
+  <span class="n">update_position</span><span class="p">()</span>
+
+<span class="c1"># Plot the results</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Example-of-simulation">Example of simulation<a class="anchor-link" href="#Example-of-simulation"> </a></h1><p>GTA Character Editor</p>
+<p><img src="/Fastpages/images/copied_from_nb/../images/maxresdefault.jpg" alt="pc"></p>
 
 </div>
 </div>
