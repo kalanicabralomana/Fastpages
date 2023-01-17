@@ -266,17 +266,9 @@ Test 4, make a dictionary
     <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">born</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">born</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">born</span><span class="o">.</span><span class="n">day</span><span class="p">))</span>
 
-<span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
-<span class="n">age</span> <span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">dob</span><span class="p">)</span>
+<span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">user</span><span class="p">:</span>
-    
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">classOf</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span>
 </pre></div>
 
     </div>
@@ -289,7 +281,7 @@ Test 4, make a dictionary
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>18
+<pre>16
 </pre>
 </div>
 </div>
@@ -307,90 +299,136 @@ Test 4, make a dictionary
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
-<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
-    <span class="c1"># Constructor:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ReactionTime</span><span class="p">,</span> <span class="n">HiLo</span><span class="p">,</span> <span class="n">Pong</span><span class="p">,</span> <span class="n">Snake</span><span class="p">,</span> <span class="n">Tokens</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ReactionTime</span> <span class="o">=</span> <span class="n">ReactionTime</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_HiLo</span> <span class="o">=</span> <span class="n">HiLo</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_Pong</span> <span class="o">=</span> <span class="n">Pong</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_Snake</span> <span class="o">=</span> <span class="n">Snake</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_Tokens</span> <span class="o">=</span> <span class="n">HiLo</span> <span class="o">+</span> <span class="n">Pong</span> <span class="o">+</span> <span class="n">Snake</span> <span class="o">+</span> <span class="n">ReactionTime</span>
+<span class="c1"># Define a User Class/Template</span>
+<span class="c1"># -- A User represents the data we want to manage</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>    
+    <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">classOf</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span> <span class="c1"># name, uid, and password are presets for each user</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
+
+    <span class="c1"># use getter to get information from the defined objects</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
     
-    <span class="c1"># Getters:</span>
+    <span class="c1"># use setter to update name after we create the object</span>
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+    
+    <span class="c1"># getter, gets the email id from object</span>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ReactionTime</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ReactionTime</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@uid</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        
+    <span class="c1"># check if uid parameter matches user id in object, return boolean</span>
+    <span class="k">def</span> <span class="nf">is_uid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">==</span> <span class="n">uid</span>
     
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">HiLo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_HiLo</span>
+    <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span> <span class="c1"># because of security only show 1st characters</span>
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">Pong</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Pong</span>   
+    <span class="c1"># update password, this is conventional setter</span>
+    <span class="k">def</span> <span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a hashed password.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;sha512&#39;</span><span class="p">)</span>
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">Snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Snake</span> 
+    <span class="c1"># check password parameter versus stored/encrypted password</span>
+    <span class="k">def</span> <span class="nf">is_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Check against hashed password.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
     
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">Tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Tokens</span>
-   
-    <span class="c1"># Setters    </span>
-    <span class="nd">@ReactionTime</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">Weight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ReactionTime</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ReactionTime</span> <span class="o">=</span> <span class="n">ReactionTime</span> 
+    <span class="nd">@property</span> 
+    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span>
 
-    <span class="nd">@HiLo</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">HiLo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">HiLo</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_Bench</span> <span class="o">=</span> <span class="n">HiLo</span>
+    <span class="nd">@classOf</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classOf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
 
-    <span class="nd">@Pong</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">Pong</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Pong</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_Pong</span> <span class="o">=</span> <span class="n">Pong</span>
-
-    <span class="nd">@Snake</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">Snake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Snake</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_Press</span> <span class="o">=</span> <span class="n">Snake</span>
-
-    <span class="nd">@Tokens</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">Tokens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Tokens</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Pushup</span> <span class="o">=</span> <span class="n">Tokens</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s2">&quot;ReactionTime&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ReactionTime</span><span class="p">,</span>
-            <span class="s2">&quot;HiLo&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">HiLo</span><span class="p">,</span>
-            <span class="s2">&quot;Pong&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pong</span><span class="p">,</span>
-            <span class="s2">&quot;Snake&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Snake</span><span class="p">,</span>
-            <span class="s2">&quot;Tokens&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Tokens</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="nb">dict</span>
-
+    
+    <span class="c1"># output content using str(object) in human readable form, uses getter</span>
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Gamer(ReactionTime=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_ReactionTime</span><span class="si">}</span><span class="s1">, HiLo=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_HiLo</span><span class="si">}</span><span class="s1">, Pong=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Pong</span><span class="si">}</span><span class="s1">, Snake=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Snake</span><span class="si">}</span><span class="s1">, Tokens=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Tokens</span><span class="si">}</span><span class="s1">)&#39;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;name: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot;, id: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s1">&quot;, psw: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="si">}</span><span class="s1">&quot;, classOf: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">classOf</span><span class="si">}</span><span class="s1">&quot;, dob: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">dob</span><span class="si">}</span><span class="s1">&quot;, age: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
 
-<span class="n">Gamer1</span> <span class="o">=</span> <span class="n">Gamer</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-<span class="n">Gamer2</span> <span class="o">=</span> <span class="n">Gamer</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">87</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 1 ReactionTime Score &quot;</span><span class="p">,</span> <span class="n">Gamer1</span><span class="o">.</span><span class="n">ReactionTime</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 1 HiLo Score &quot;</span><span class="p">,</span> <span class="n">Gamer1</span><span class="o">.</span><span class="n">HiLo</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 1 Pong Score &quot;</span><span class="p">,</span> <span class="n">Gamer1</span><span class="o">.</span><span class="n">Pong</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 1 Snake Score &quot;</span><span class="p">,</span> <span class="n">Gamer1</span><span class="o">.</span><span class="n">Snake</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 1 Total &quot;</span><span class="p">,</span> <span class="n">Gamer1</span><span class="o">.</span><span class="n">Tokens</span><span class="p">,</span> <span class="s2">&quot;tokens&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 2 ReactionTime Score &quot;</span><span class="p">,</span> <span class="n">Gamer2</span><span class="o">.</span><span class="n">ReactionTime</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 2 HiLo Score &quot;</span><span class="p">,</span> <span class="n">Gamer2</span><span class="o">.</span><span class="n">HiLo</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 2 Pong Score &quot;</span><span class="p">,</span> <span class="n">Gamer2</span><span class="o">.</span><span class="n">Pong</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 2 Snake Score &quot;</span><span class="p">,</span> <span class="n">Gamer2</span><span class="o">.</span><span class="n">Snake</span><span class="p">,</span> <span class="s2">&quot;points&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gamer 2 Total &quot;</span><span class="p">,</span> <span class="n">Gamer2</span><span class="o">.</span><span class="n">Tokens</span><span class="p">,</span> <span class="s2">&quot;tokens&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Gamer1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Gamer2</span><span class="p">)</span>
+    <span class="c1"># output command to recreate the object, uses attribute directly</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Person(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">, classOf=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span><span class="si">}</span><span class="s1">, dob=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">dob</span><span class="si">}</span><span class="s1">, age=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_age</span><span class="si">}</span><span class="s1">)&#39;</span>
+
+ <span class="c1"># a name getter method, extracts date of birth from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span>
+    
+    <span class="c1"># a setter function, allows date of birth to be updated after initial object creation</span>
+    <span class="nd">@dob</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dob</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+
+    <span class="nd">@property</span> 
+    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_age</span>
+
+    <span class="nd">@age</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="c1"># tester method to print users</span>
+<span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">psw</span><span class="p">,</span> <span class="n">classOf</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+        <span class="c1"># test for match in database</span>
+        <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">uid</span> <span class="o">==</span> <span class="n">uid</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">is_password</span><span class="p">(</span><span class="n">psw</span><span class="p">):</span>  <span class="c1"># check for match</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">user</span>
+        <span class="c1"># print using __str__ method</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="k">def</span> <span class="nf">calculate_age</span><span class="p">(</span><span class="n">born</span><span class="p">):</span>
+    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">born</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="p">((</span><span class="n">today</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">today</span><span class="o">.</span><span class="n">day</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">born</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">born</span><span class="o">.</span><span class="n">day</span><span class="p">))</span> 
+
+
+<span class="c1"># place tester code inside of special if!  This allows include without tester running</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span> <span class="c1">#</span>
+
+    <span class="c1"># defining each user as an object</span>
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Kalani Cabral-Omana&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;kcabralomana&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;yoyoyo11!&#39;</span><span class="p">,</span> <span class="n">classOf</span><span class="o">=</span><span class="mi">2024</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span> <span class="n">age</span><span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">18</span><span class="p">)))</span>
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Leo Sun&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;lsun&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;wahwahwah22!&#39;</span><span class="p">,</span> <span class="n">classOf</span><span class="o">=</span><span class="mi">2024</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="n">age</span><span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)))</span>
+    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Naman Keswani&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;nk&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;seahawks33!&#39;</span><span class="p">,</span> <span class="n">classOf</span><span class="o">=</span><span class="mi">2024</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="p">[</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="n">age</span><span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">)))</span>
+    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sam Ponta&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;sams&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;oldnavy44!&#39;</span><span class="p">,</span> <span class="n">classOf</span><span class="o">=</span><span class="mi">2023</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="p">[</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">age</span><span class="o">=</span> <span class="n">calculate_age</span><span class="p">(</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="c1"># list defining</span>
+    <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">]</span>
+
+    <span class="c1"># Dictionary</span>
+    <span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">    The __dict__ in Python represents a dictionary or any mapping object that is used to store the attributes of the object. </span>
+<span class="sd">    Every object in Python has an attribute that is denoted by __dict__. </span>
+<span class="sd">    Use the json.dumps() method to convert the list of Users to a JSON string.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dictionary: &quot;</span><span class="p">)</span>
+    <span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">user</span><span class="o">.</span><span class="vm">__dict__</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">])</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -403,18 +441,8 @@ Test 4, make a dictionary
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Gamer 1 ReactionTime Score  15 points
-Gamer 1 HiLo Score  22 points
-Gamer 1 Pong Score  10 points
-Gamer 1 Snake Score  4 points
-Gamer 1 Total  51 tokens
-Gamer 2 ReactionTime Score  22 points
-Gamer 2 HiLo Score  11 points
-Gamer 2 Pong Score  9 points
-Gamer 2 Snake Score  44 points
-Gamer 2 Total  86 tokens
-{&#34;ReactionTime&#34;: 15, &#34;HiLo&#34;: 22, &#34;Pong&#34;: 10, &#34;Snake&#34;: 4, &#34;Tokens&#34;: 51}
-{&#34;ReactionTime&#34;: 22, &#34;HiLo&#34;: 11, &#34;Pong&#34;: 9, &#34;Snake&#34;: 44, &#34;Tokens&#34;: 86}
+<pre>Dictionary: 
+[{&#34;_name&#34;: &#34;Kalani Cabral-Omana&#34;, &#34;_uid&#34;: &#34;kcabralomana&#34;, &#34;_password&#34;: &#34;sha512$RIZC5HOdSXjhrP2x$4662c584bab7a3550a36009917eaf56c7a785f34580e32d4f6414289d2370a3f995af3fda5bc9f34a7aab09fa45128537bfe9d2a9b0ea9b5bb0c374787f0de41&#34;, &#34;_dob&#34;: [2006, 4, 18], &#34;_age&#34;: 16, &#34;_classOf&#34;: 2024}, {&#34;_name&#34;: &#34;Leo Sun&#34;, &#34;_uid&#34;: &#34;lsun&#34;, &#34;_password&#34;: &#34;sha512$4HlTXXemq2wNaeUr$3bf50405fa437e90a9152f288b4c165350f61ae6db42142b90d59c06ffec7c8fb909da7ae05e23e53b907a025de26d7a8e7e06995e1bb0db026204237b60bea7&#34;, &#34;_dob&#34;: [2006, 1, 11], &#34;_age&#34;: 18, &#34;_classOf&#34;: 2024}, {&#34;_name&#34;: &#34;Naman Keswani&#34;, &#34;_uid&#34;: &#34;nk&#34;, &#34;_password&#34;: &#34;sha512$mIxQPJJbLmGZZjPV$fa00628a8d5817c053405863b9696a233a0e93a0da8ad339e7721c708b0f5248536fbc0aff2b7333fef3c9f5d4bc7d00f70f30984d34afdfd98486915cabd091&#34;, &#34;_dob&#34;: [2006, 4, 20], &#34;_age&#34;: 16, &#34;_classOf&#34;: 2024}, {&#34;_name&#34;: &#34;Sam Ponta&#34;, &#34;_uid&#34;: &#34;sams&#34;, &#34;_password&#34;: &#34;sha512$tWMagN1P3nPkznmV$a05e66672f84605ffb34ef257bb8b14b59921636c818912a235d73add5ba798c2d6e96882f23a6bf7261c326dd3aaea2ec755e18fffbadcb51e5e39da19ae3ad&#34;, &#34;_dob&#34;: [2005, 4, 2], &#34;_age&#34;: 17, &#34;_classOf&#34;: 2023}]
 </pre>
 </div>
 </div>
