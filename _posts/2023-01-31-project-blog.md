@@ -26,4 +26,4 @@ Procedural Abstraction: We will do this in our games and how the game can be pla
 
 Algorithm Implementation: This will also be displayed in our games sine they will include sequencing selection and iteration, in our chess, blackjack, and tic tac toe.
 
-Testing: 
+Testing: We will show this through our features beign the games with different inputs and outputs
