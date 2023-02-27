@@ -39,27 +39,25 @@ Local storage is an efficient and straightforward way to store and retrieve data
 ## 3.c. Procedural Abstraction
 
 ### 3.c.i
-PIC
+![]({{site.baseurl}}/images/3ci.jpg "https://github.com/fastai/fastpages")
 
 ### 3.c.ii
-PIC
+![]({{site.baseurl}}/images/3cii.jpg "https://github.com/fastai/fastpages")
 
 ### 3.c.iii.
-TXT
+The procedure here is spinner(). As the name implies, this function is able to return a random integer between there numerical values that are passed into it as parameters. Using that integer it selects the square that matches that integer highlighting it purple if there was no bet. And if the bet was placed it highlights green. Using the bets it will update score according to the bet placed or if there was no bet placed on the square that will be highlighted.
 
 ### 3.c.iv Algorithm Implementation
-TXT
+![]({{site.baseurl}}/images/3civ.jpg "https://github.com/fastai/fastpages")
+Spinner(), generates an animated sequence of characters that produces a spinner animation on the console. The spinner variable, a list of characters, represents each frame in the animation. Upon calling the function, an infinite while loop is entered, which prints the next character in the spinner list followed by a carriage return character. The carriage return moves the cursor back to the beginning of the line and allows for overwriting of the previously printed character to create the illusion of a rotating spinner. The function prints the last character in the spinner list before resetting the index variable to zero, so the animation restarts from the beginning of the list. The spinner function is a dynamic and interactive example of how Python's built-in functions and constructs can be utilized to create engaging programs that add a creative touch. By calling this function, users can easily add a fun and interactive element to their Python programs.
 
 ## 3.d. Testing
 
 ### 3.d.i. 
-The first call
-The second call
+The first call in this function is selecting a random value for the selected squares. When the spinner button is clicked the function generates a random number for a selected square for the user. The second call is to remove the coins from the playing board and change the background color of the selected/betted square or non-betted square.
 
 ### 3.d.ii.
-The conditions tests by the first call
-The conditions tests by the second call
+The conditions tests by the first call are if the player was selected on the certain square the coins may be added to the total. The conditions tests by the second call are if the player didn't selected the certain square
 
 ### 3.d.iii.
-The results of the first call
-The results of the second call
+The results of the first call are if the player placed a bet on the winning square, an alert is displayed with a winning statement and value of coins won. The results of the second call are if the player did not place a bet ont he winning square, an alert is displayed with a losing statement.
