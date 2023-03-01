@@ -61,3 +61,5 @@ The conditions tests by the first call are if the player was selected on the cer
 
 ### 3.d.iii.
 The results of the first call are if the player placed a bet on the winning square, an alert is displayed with a winning statement and value of coins won. The results of the second call are if the player did not place a bet ont he winning square, an alert is displayed with a losing statement.
+
+[VID](https://drive.google.com/file/d/1vCVj5pGWIGbmwMdxC34b9AmwuTpZjidr/view?usp=sharing)
