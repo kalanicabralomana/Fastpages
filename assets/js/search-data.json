@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Final Tri 2 MC",
-            "content": ". I got a 47/50 which is a 94%. My corrections to the 3 questions I missed are listed below. . Question 29: Skill 4.B - Values after sequence of Boolean expressions . . Question 34: Skill 2.B - Move robot to gray square . . Question 40: Skill 2.B - Move robot back to starting place . .",
+            "content": ". I got a 47/50 which is a 94%. My corrections to the 3 questions I missed are listed below. . Question 29: Skill 4.B - Values after sequence of Boolean expressions . After I answered tis question I later noticed that the fourth statement assigns the value false to a. The fifth statement assigns the value false to c. The value of b does not change after it is initially assigned. I usually get confused by these types of questions so in the future I will try to break down these questions. . Question 34: Skill 2.B - Move robot to gray square . I struggled with this question becasue its hard for me to imagine the robot moving. After I answered I noticed the robot needs to rotate right instead of left after the block of 2 moves forward. Next time I will try to draw this out. . Question 40: Skill 2.B - Move robot back to starting place . This question is similar to the other one.After moving forward two squares, if the robot were to turn left, then the next move forward would put the robot beyond the edge of the grid. Again next time I will try to draw it out and figure out the movements. .",
             "url": "https://kcabralomana.github.io/Fastpages/markdown/final/2023/03/07/tri2final.html",
             "relUrl": "/markdown/final/2023/03/07/tri2final.html",
             "date": " • Mar 7, 2023"
