@@ -387,7 +387,7 @@ Student ID  GPA
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1">#sort the values in reverse order</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'GPA'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'GPA'</span><span class="p">],</span> <span class="n">descending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -414,20 +414,31 @@ Student ID  GPA
 1         246             10  4.00
 4         324         Junior  4.75
 
-   Student ID Year in School   GPA
-4         324         Junior  4.75
-1         246             10  4.00
-7         167             10  3.90
-0         123             12  3.57
-3         469             11  3.45
-10        469             11  3.45
-5         313             20  3.33
-8         235      9th Grade  3.15
-6         145             12  2.95
-9         nil              9  2.80
-2         578             12  2.78
-11        456             10  2.75
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/kcabralomana/Fastpages/_notebooks/2023-03-09-unit2.3.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2023-03-09-unit2.3.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> print()
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2023-03-09-unit2.3.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> #sort the values in reverse order
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/kcabralomana/Fastpages/_notebooks/2023-03-09-unit2.3.ipynb#X13sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> print(df.sort_values(by=['GPA'], descending=False))
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py:311</span>, in <span class="ansi-cyan-fg">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    305</span> if len(args) &gt; num_allow_args:
+<span class="ansi-green-intense-fg ansi-bold">    306</span>     warnings.warn(
+<span class="ansi-green-intense-fg ansi-bold">    307</span>         msg.format(arguments=arguments),
+<span class="ansi-green-intense-fg ansi-bold">    308</span>         FutureWarning,
+<span class="ansi-green-intense-fg ansi-bold">    309</span>         stacklevel=stacklevel,
+<span class="ansi-green-intense-fg ansi-bold">    310</span>     )
+<span class="ansi-green-fg">--&gt; 311</span> return func(*args, **kwargs)
+
+<span class="ansi-red-fg">TypeError</span>: sort_values() got an unexpected keyword argument 'descending'</pre>
 </div>
 </div>
 
@@ -562,8 +573,8 @@ Student ID  GPA
 
 <span class="c1">#the data can be stored as a python dictionary</span>
 <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">"calories"</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">390</span><span class="p">],</span>
-  <span class="s2">"duration"</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
+  <span class="s2">"calories"</span><span class="p">:</span> <span class="p">[</span><span class="mi">420</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
+  <span class="s2">"duration"</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
 <span class="p">}</span>
 <span class="c1">#stores the data in a data frame</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"-------------Dict_to_DF------------------"</span><span class="p">)</span>
@@ -573,7 +584,7 @@ Student ID  GPA
 <span class="nb">print</span><span class="p">(</span><span class="s2">"----------Dict_to_DF_labels--------------"</span><span class="p">)</span>
 
 <span class="c1">#or with the index argument, you can label rows.</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"day1"</span><span class="p">,</span> <span class="s2">"day2"</span><span class="p">,</span> <span class="s2">"day3"</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"day1"</span><span class="p">,</span> <span class="s2">"day2"</span><span class="p">,</span> <span class="s2">"day3"</span><span class="p">,</span>  <span class="s2">"day4"</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
@@ -592,11 +603,13 @@ Student ID  GPA
 0       420        50
 1       380        40
 2       390        45
+3       200        35
 ----------Dict_to_DF_labels--------------
       calories  duration
 day1       420        50
 day2       380        40
 day3       390        45
+day4       200        35
 </pre>
 </div>
 </div>
