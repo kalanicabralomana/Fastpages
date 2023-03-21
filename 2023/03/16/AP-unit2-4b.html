@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -201,7 +201,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Fetch results of Schema</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('users')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"PRAGMA table_info('football')"</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -211,6 +211,8 @@ window.onload = wrap_img;
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
 <span class="n">schema</span><span class="p">()</span>
+
+<span class="c1"># this makes the schema table from the sqlite database</span>
 </pre></div>
 
     </div>
@@ -225,9 +227,9 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(0, 'id', 'INTEGER', 1, None, 1)
 (1, '_name', 'VARCHAR(255)', 1, None, 0)
-(2, '_uid', 'VARCHAR(255)', 1, None, 0)
-(3, '_password', 'VARCHAR(255)', 1, None, 0)
-(4, '_dob', 'DATE', 0, None, 0)
+(2, '_number', 'INTEGER', 1, None, 0)
+(3, '_wins', 'INTEGER', 1, None, 0)
+(4, '_losses', 'INTEGER', 1, None, 0)
 </pre>
 </div>
 </div>
@@ -274,7 +276,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="c1"># Execute a SELECT statement to retrieve data from a table</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM users'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM football'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="c1"># Print the results</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -288,6 +290,8 @@ window.onload = wrap_img;
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
 <span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># This reads the data in the sqlite database</span>
 </pre></div>
 
     </div>
@@ -300,12 +304,18 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 'Thomas Edison', 'toby', 'sha256$vteci8irm0wGRNIj$7915adbc55daae382b8636d546d2f0836c5f08905437cc654d76f7d7ffac4ad2', '1847-02-11')
-(2, 'Nikola Tesla', 'niko', 'sha256$rLR8ghLIR6CbyTQM$1db5b8b0ae2826224d4e0107a41e9d7c8e862c2cf24c1a9e7ab1f313642553d1', '2023-03-15')
-(3, 'Alexander Graham Bell', 'lex', 'sha256$lTep8R3bW49RCrye$4a78a53cfd2a09360f6afdaf5fb8ff1900aa255a345e1ebbc10cafb4087f6069', '2023-03-15')
-(4, 'Eli Whitney', 'whit', 'sha256$wFcW8V1mtZ8d6X1G$225d0854e92246e6ac400dfb4d06964ffdde1d6c88a75568cb6d932ea2d55aa6', '2023-03-15')
-(5, 'Indiana Jones', 'indi', 'sha256$vOfhYPmhDSsr6aHP$0d74f20765b1189242b2e9ea9b7c28024ade29400942b9aa3134c69dc25b9bca', '1920-10-21')
-(6, 'Marion Ravenwood', 'raven', 'sha256$UoOUyMpLgAD3cFdp$cf815ab782f8929a6b99f00f18aefcea3c2f8162e79351f46a24b99578b690b2', '1921-10-21')
+<pre>(1, 'Patrick Mahomes', 15, 64, 16)
+(2, 'JJ Watt', 99, 77, 74)
+(3, 'Russell Wilson', 3, 108, 64)
+(4, 'Travis Kelce', 87, 105, 39)
+(5, 'Joe Burrow', 9, 24, 17)
+(6, 'Trevor Lawrence', 16, 12, 22)
+(7, 'Patrick Mahomes', 15, 64, 16)
+(8, 'JJ Watt', 99, 77, 74)
+(9, 'Russell Wilson', 3, 108, 64)
+(10, 'Travis Kelce', 87, 105, 39)
+(11, 'Joe Burrow', 9, 24, 17)
+(12, 'Trevor Lawrence', 16, 12, 22)
 </pre>
 </div>
 </div>
@@ -344,9 +354,9 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your name:"</span><span class="p">)</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your user id:"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your password"</span><span class="p">)</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your date of birth 'YYYY-MM-DD'"</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your number:"</span><span class="p">)</span>
+    <span class="n">wins</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your wins:"</span><span class="p">)</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your losses:"</span><span class="p">)</span>
     
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -356,11 +366,11 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to insert data into a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO users (_name, _uid, _password, _dob) VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO football (_name, _number, _wins, _losses) VALUES (?, ?, ?, ?)"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">))</span>
         
         <span class="c1"># Commit the changes to the database</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"A new user record </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> has been created"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"A new player record </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> has been created"</span><span class="p">)</span>
                 
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the INSERT:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -410,13 +420,10 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to update"</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated password"</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">"hacked"</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">'gothackednewpassword123'</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">"successfully updated"</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter name to update"</span><span class="p">)</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated number"</span><span class="p">)</span>
+    <span class="n">wins</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated wins"</span><span class="p">)</span>
+    <span class="n">losses</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter updated losses"</span><span class="p">)</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -426,12 +433,14 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to update data in a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE users SET _password = ? WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE football SET _number = ? WHERE _name = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE football SET _wins = ? WHERE _name = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE football SET _losses = ? WHERE _name = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">losses</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the password has been </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with user id </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> the password has been successfully updated"</span><span class="p">)</span>
             <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the UPDATE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -478,7 +487,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter user id to delete"</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter player name to delete"</span><span class="p">)</span>
 
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -487,13 +496,13 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM users WHERE _uid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">uid</span><span class="p">,))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM football WHERE _name = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="c1"># The uid was found in the table and the row was deleted</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was successfully deleted"</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with name </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> was successfully deleted"</span><span class="p">)</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the DELETE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
@@ -561,6 +570,47 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A new player record Kalani has been created
+(1, 'Patrick Mahomes', 15, 64, 16)
+(2, 'JJ Watt', 99, 77, 74)
+(3, 'Russell Wilson', 3, 108, 64)
+(4, 'Travis Kelce', 87, 105, 39)
+(5, 'Joe Burrow', 9, 24, 17)
+(6, 'Trevor Lawrence', 16, 12, 22)
+(7, 'Patrick Mahomes', 15, 64, 16)
+(8, 'JJ Watt', 99, 77, 74)
+(9, 'Russell Wilson', 3, 108, 64)
+(10, 'Travis Kelce', 87, 105, 39)
+(11, 'Joe Burrow', 9, 24, 17)
+(12, 'Trevor Lawrence', 16, 12, 22)
+(13, 'Kalani', 20, 2, 2)
+The row with user id Kalani the password has been successfully updated
+The row with name Kalani was successfully deleted
+(1, 'Patrick Mahomes', 15, 64, 16)
+(2, 'JJ Watt', 99, 77, 74)
+(3, 'Russell Wilson', 3, 108, 64)
+(4, 'Travis Kelce', 87, 105, 39)
+(5, 'Joe Burrow', 9, 24, 17)
+(6, 'Trevor Lawrence', 16, 12, 22)
+(7, 'Patrick Mahomes', 15, 64, 16)
+(8, 'JJ Watt', 99, 77, 74)
+(9, 'Russell Wilson', 3, 108, 64)
+(10, 'Travis Kelce', 87, 105, 39)
+(11, 'Joe Burrow', 9, 24, 17)
+(12, 'Trevor Lawrence', 16, 12, 22)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -646,6 +696,25 @@ The data is stored in a database which is called and being used throughout the p
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Select an option:
+(c) Create
+(r) Read
+(u) Update
+(d) Delete
+(s) Schema
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
