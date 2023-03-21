@@ -2,8 +2,8 @@
   
     
         "post0": {
-            "title": "Final Tri 2 MC",
-            "content": "",
+            "title": "Big Idea 2 MC",
+            "content": "I got a 23/25 on my MC (92%) . . Q2: Skill 1.D . . I got this question wrong because I didn’t realize that a compression algorithm’s ability to keep data secure isn’t its primary function. B is the correct answer (A lossless compression algorithm can guarantee reconstruction of original data, while a lossy compression algorithm cannot.) because lossless compression algorithms guarantee the ability to reconstruct the original data, whereas lossy compression algorithms do not. It’s critical for me to fully grasp this because it was one of the lessons we went over in class. . Q21: Skill 2.B . . I answered this question incorrectly because I only chose one of the two correct answers. Choice B (Filter by photographer, then by year, then by year) was correct because filtering by photographer removes any entries with unknown photographers. Any entries with unknown years will be removed if you filter by year. Sorting by year will sort the remaining entries in column C from least to greatest, placing the photograph with the lowest year value in the spreadsheet’s first row. When the answer was D, I chose option C (sort by subject, then sort by year, then filter by photographer). C is incorrect because this sequence of steps does not remove any entries with an unknown year, resulting in an entry with a year value of -1 in the first row of the spreadsheet. Choice D (sort by year, then filter by year, then filter by photographer) is correct because sorting by year sorts the spreadsheet from least to greatest in column C. Any entries with unknown years will be removed if you filter by year. Any entries with unknown photographers will be removed if you filter by photographer. Because the filters have no effect on the order of the entries, the photograph with the lowest year value will be in the first row of the spreadsheet. . Q25: Skill 2.B . . I answered correctly, but I wanted to put it here because I was a little confused when I read it. C is the correct answer (The transformed number is 8 times the value of the original number.) I discovered that it is correct while taking the quiz because appending a 0 to the end of a binary number multiplies the number by 2. As a result, appending three 0s to the end of a binary number multiplies it by 2 three times, which is equivalent to multiplying it by 8. .",
             "url": "https://kcabralomana.github.io/Fastpages/markdown/final/2023/03/20/bigidea2.html",
             "relUrl": "/markdown/final/2023/03/20/bigidea2.html",
             "date": " • Mar 20, 2023"
@@ -784,7 +784,7 @@
     
         ,"post71": {
             "title": "Markdown Table",
-            "content": "The Weeks Ahead . S.NO 9/5-9/9 9/12-9/16 9/19-9/23 Time . AP Physics | Unit 2 test | Start Unit 3 | Lab Week | 20 Mar 2023 | . Am Lit | Analyze poems | Create Poems | Recite Poems | - | . AP Calc AB | Unit 1 test | Start Unit 2 | Study for Unit 2 | - | . AP CSP | Creative Development | Frontend Development | Backend Development | - | .",
+            "content": "The Weeks Ahead . S.NO 9/5-9/9 9/12-9/16 9/19-9/23 Time . AP Physics | Unit 2 test | Start Unit 3 | Lab Week | 21 Mar 2023 | . Am Lit | Analyze poems | Create Poems | Recite Poems | - | . AP Calc AB | Unit 1 test | Start Unit 2 | Study for Unit 2 | - | . AP CSP | Creative Development | Frontend Development | Backend Development | - | .",
             "url": "https://kcabralomana.github.io/Fastpages/markdown/2022/09/05/markdown-table.html",
             "relUrl": "/markdown/2022/09/05/markdown-table.html",
             "date": " • Sep 5, 2022"
