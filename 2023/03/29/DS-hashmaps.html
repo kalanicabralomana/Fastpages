@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      15 min read
     
 </span></p>
 
@@ -260,7 +260,7 @@ window.onload = wrap_img;
 
 <span class="c1"># What data structures do you see?</span>
 <span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># lists, dictionary</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -366,10 +366,12 @@ The Man
 
 <span class="c1"># What can you change to make sure there are no duplicate producers?</span>
 <span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1">#make lover_album["producer"] = set(['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes'])</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"producer"</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -383,6 +385,7 @@ The Man
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
+['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']
 </pre>
 </div>
 </div>
@@ -404,7 +407,7 @@ The Man
 
 <span class="c1"># How would add an additional genre to the dictionary, like electropop? </span>
 <span class="c1"># </span>
-<span class="c1"># </span>
+<span class="n">lover_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"electropop"</span><span class="p">)</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
@@ -420,7 +423,7 @@ The Man
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop', 'electropop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
 </pre>
 </div>
 </div>
@@ -443,7 +446,7 @@ The Man
 
 <span class="c1"># Write your own code to print tracks in readable format</span>
 <span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1">#Next cell</span>
 </pre></div>
 
     </div>
@@ -459,9 +462,74 @@ The Man
 <pre>title: Lover
 artist: Taylor Swift
 year: 2019
-genre: ['Pop', 'Synth-pop']
+genre: ['Pop', 'Synth-pop', 'electropop']
 tracks: {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}
 producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Title: </span><span class="si">{</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Artist: </span><span class="si">{</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'artist'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Year: </span><span class="si">{</span><span class="n">lover_album</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Genres:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">genre</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'genre'</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">genre</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tracks:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">track_number</span><span class="p">,</span> <span class="n">track_title</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">track_number</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">track_title</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Title: Lover
+Artist: Taylor Swift
+Year: 2019
+Genres:
+- Pop
+- Synth-pop
+- electropop
+Tracks:
+1. I Forgot That You Existed
+2. Cruel Summer
+3. Lover
+4. The Man
+5. The Archer
+6. I Think He Knows
+7. Miss Americana &amp; The Heartbreak Prince
+8. Paper Rings
+9. Cornelia Street
+10. Death By A Thousand Cuts
+11. London Boy
+12. Soon You'll Get Better (feat. Dixie Chicks)
+13. False God
+14. You Need To Calm Down
+15. Afterglow
+16. Me! (feat. Brendon Urie of Panic! At The Disco)
+17. It's Nice To Have A Friend
+18. Daylight
+19. All Of The Girls You Loved Before
 </pre>
 </div>
 </div>
@@ -490,7 +558,7 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
 <span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># We can display the property options and format the outputs in a looping menu</span>
 </pre></div>
 
     </div>
@@ -503,7 +571,194 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>['Pop', 'Synth-pop']
+<pre>['Pop', 'Synth-pop', 'electropop']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album?"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Property not found. Please try again. </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="c1"># Define the options as a list</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="c1"># Define the menu function</span>
+<span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+    <span class="c1"># Display the menu options</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Select an option from the list below:'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+
+    <span class="c1"># Get the user's choice</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album from the list of properties shown? Type the full word or press enter to exit."</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Find the selected option in the options list</span>
+    <span class="n">selected_option</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">option</span><span class="p">):</span>
+            <span class="n">selected_option</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+            <span class="k">break</span>
+    
+
+    <span class="k">if</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"title"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Title: </span><span class="si">{</span><span class="n">lover_album</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"artist"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Artist: </span><span class="si">{</span><span class="n">lover_album</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"year"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Year: </span><span class="si">{</span><span class="n">lover_album</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"genre"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Genre(s):"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'genre'</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">g</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Tracks:"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">track_number</span><span class="p">,</span> <span class="n">track_title</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">track_number</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">track_title</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"producer"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Producer(s):"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">[</span><span class="s1">'producer'</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">""</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Property not found. Please try again. </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="c1"># Repeat the menu</span>
+    <span class="n">menu</span><span class="p">()</span>
+
+
+<span class="n">menu</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Genre(s):
+- Pop
+- Synth-pop
+- electropop
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Producer(s):
+- Taylor Swift
+- Jack Antonoff
+- Joel Little
+- Taylor Swift
+- Louis Bell
+- Frank Dukes
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Title: Lover 
+
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Artist: Taylor Swift 
+
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Year: 2019 
+
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Tracks:
+1) I Forgot That You Existed
+2) Cruel Summer
+3) Lover
+4) The Man
+5) The Archer
+6) I Think He Knows
+7) Miss Americana &amp; The Heartbreak Prince
+8) Paper Rings
+9) Cornelia Street
+10) Death By A Thousand Cuts
+11) London Boy
+12) Soon You'll Get Better (feat. Dixie Chicks)
+13) False God
+14) You Need To Calm Down
+15) Afterglow
+16) Me! (feat. Brendon Urie of Panic! At The Disco)
+17) It's Nice To Have A Friend
+18) Daylight
+19) All Of The Girls You Loved Before
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
 </pre>
 </div>
 </div>
@@ -547,6 +802,360 @@ producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Loui
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tupac_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"All Eyez On Me"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"2pac"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">1996</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Hip Hop"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"Ambitionz az a Ridah"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"All Bout U"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Skandalouz"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"Got My Mind Made Up"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"How Do U Want It"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"2 of Amerikaz Most Wanted"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"No More Pain"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"Heartz of Men"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"Life Goes On"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"Only God Can Judge Me"</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">"Tradin' War Stories"</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">"California Love"</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">"I Ain't Mad at Cha"</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupac_album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'All Eyez On Me', 'artist': '2pac', 'year': 1996, 'genre': ['Hip Hop'], 'tracks': {1: 'Ambitionz az a Ridah', 2: 'All Bout U', 3: 'Skandalouz', 4: 'Got My Mind Made Up', 5: 'How Do U Want It', 6: '2 of Amerikaz Most Wanted', 7: 'No More Pain', 8: 'Heartz of Men', 9: 'Life Goes On', 10: 'Only God Can Judge Me', 11: "Tradin' War Stories", 12: 'California Love', 13: "I Ain't Mad at Cha"}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tupac_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'tracks'</span><span class="p">)[</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># double indexing</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupac_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Got My Mind Made Up
+Got My Mind Made Up
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tupac_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">'2pac'</span><span class="p">,</span> <span class="s1">'L.T. Hutton'</span><span class="p">,</span> <span class="s1">'Young Noble'</span><span class="p">])</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupac_album</span><span class="p">)</span>
+
+<span class="c1"># Printing the producer set</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupac_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'All Eyez On Me', 'artist': '2pac', 'year': 1996, 'genre': ['Hip Hop'], 'tracks': {1: 'Ambitionz az a Ridah', 2: 'All Bout U', 3: 'Skandalouz', 4: 'Got My Mind Made Up', 5: 'How Do U Want It', 6: '2 of Amerikaz Most Wanted', 7: 'No More Pain', 8: 'Heartz of Men', 9: 'Life Goes On', 10: 'Only God Can Judge Me', 11: "Tradin' War Stories", 12: 'California Love', 13: "I Ain't Mad at Cha"}, 'producer': {'2pac', 'Young Noble', 'L.T. Hutton'}}
+{'2pac', 'Young Noble', 'L.T. Hutton'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tupac_album</span><span class="p">[</span><span class="s2">"genre"</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"Hip Hop"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Title: </span><span class="si">{</span><span class="n">tupac_album</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Artist: </span><span class="si">{</span><span class="n">tupac_album</span><span class="p">[</span><span class="s1">'artist'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Producer(s):'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">prod</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="p">[</span><span class="s1">'producer'</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">prod</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Year: </span><span class="si">{</span><span class="n">tupac_album</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Genres:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">genre</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="p">[</span><span class="s1">'genre'</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">genre</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tracks:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">track_number</span><span class="p">,</span> <span class="n">track_title</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">track_number</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">track_title</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Title: All Eyez On Me
+Artist: 2pac
+Producer(s):
+- 2pac
+- Young Noble
+- L.T. Hutton
+Year: 1996
+Genres:
+- Hip Hop
+- Hip Hop
+Tracks:
+1. Ambitionz az a Ridah
+2. All Bout U
+3. Skandalouz
+4. Got My Mind Made Up
+5. How Do U Want It
+6. 2 of Amerikaz Most Wanted
+7. No More Pain
+8. Heartz of Men
+9. Life Goes On
+10. Only God Can Judge Me
+11. Tradin' War Stories
+12. California Love
+13. I Ain't Mad at Cha
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="c1"># Define the menu function</span>
+<span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+    <span class="c1"># Display the menu options</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Select an option from the list below:'</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+
+    <span class="c1"># Get the user's choice</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"What would you like to know about the album from the list of properties shown? Type the full word or press enter to exit."</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Find the selected option in the options list</span>
+    <span class="n">selected_option</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">option</span><span class="p">):</span>
+            <span class="n">selected_option</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+            <span class="k">break</span>
+    
+
+    <span class="k">if</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"title"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Title: </span><span class="si">{</span><span class="n">tupac_album</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"artist"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Artist: </span><span class="si">{</span><span class="n">tupac_album</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"year"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="se">\n</span><span class="s1"> Year: </span><span class="si">{</span><span class="n">tupac_album</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"genre"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Genre(s):"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="p">[</span><span class="s1">'genre'</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">g</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"tracks"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Tracks:"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">track_number</span><span class="p">,</span> <span class="n">track_title</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="p">[</span><span class="s1">'tracks'</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">track_number</span><span class="si">}</span><span class="s2">) </span><span class="si">{</span><span class="n">track_title</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">"producer"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Producer(s):"</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">tupac_album</span><span class="p">[</span><span class="s1">'producer'</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"- </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">search</span> <span class="o">==</span> <span class="s2">""</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Property not found. Please try again. </span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="c1"># Repeat the menu</span>
+    <span class="n">menu</span><span class="p">()</span>
+
+<span class="n">menu</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Year: 1996 
+
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Tracks:
+1) Ambitionz az a Ridah
+2) All Bout U
+3) Skandalouz
+4) Got My Mind Made Up
+5) How Do U Want It
+6) 2 of Amerikaz Most Wanted
+7) No More Pain
+8) Heartz of Men
+9) Life Goes On
+10) Only God Can Judge Me
+11) Tradin' War Stories
+12) California Love
+13) I Ain't Mad at Cha
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Producer(s):
+- 2pac
+- Young Noble
+- L.T. Hutton
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+
+ Title: All Eyez On Me 
+
+
+ Select an option from the list below:
+title
+artist
+year
+genre
+tracks
+producer
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
