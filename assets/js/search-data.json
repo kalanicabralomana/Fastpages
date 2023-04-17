@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Tri3cpt",
-            "content": "",
-            "url": "https://kcabralomana.github.io/Fastpages/2023/04/16/tri3cpt.html",
-            "relUrl": "/2023/04/16/tri3cpt.html",
+            "title": "Tri 3 CPT Write-Up",
+            "content": "Tri 3 CPT Write-Up . 3a. Program Purpose and Function . i. Describes the overall purpose of the program. . The purpose of the program is to create a way for users to test their luck with the Roulette casino game. . ii. Describes what functionality of the program is demonstrated in the video. . The video shows a user playing through the game while aslo . iii. Describes the input and output of the program demonstrated in the video. . The inputs in the video are the user typing in the username, creating the user, placing coins on board, spinning board, and loading user. The outputs demonstrated in the video are the winning/losing square, and change in coins for the user. . 3b. Data Abstraction . i. The first program code segment must show how data have been stored in the list. . . ii. The second program code segment must show the data in the same list being used, such as creating new data from the existing data or accessing multiple elements in the list, as part of fulfilling the program’s purpose . .",
+            "url": "https://kcabralomana.github.io/Fastpages/markdown/2023/04/16/tri3cpt.html",
+            "relUrl": "/markdown/2023/04/16/tri3cpt.html",
             "date": " • Apr 16, 2023"
         }
         
