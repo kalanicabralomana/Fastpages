@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>P4-Y 4/24 DevOps for Dev Tools | Kalani Cabral-Omana</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="P4-Y 4/24 DevOps for Dev Tools" />
+<meta name="author" content="Vardaan, Shaurya, Shivansh, Vyaan, Dhruva, Nicolas, Prasith, Justin" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Devops Guide to setting up Developer Tools and Environments" />
+<meta property="og:description" content="Devops Guide to setting up Developer Tools and Environments" />
+<link rel="canonical" href="https://kcabralomana.github.io/Fastpages/student/2023/04/25/devopshacks.html" />
+<meta property="og:url" content="https://kcabralomana.github.io/Fastpages/student/2023/04/25/devopshacks.html" />
+<meta property="og:site_name" content="Kalani Cabral-Omana" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="P4-Y 4/24 DevOps for Dev Tools" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Vardaan, Shaurya, Shivansh, Vyaan, Dhruva, Nicolas, Prasith, Justin"},"dateModified":"2023-04-25T00:00:00-05:00","datePublished":"2023-04-25T00:00:00-05:00","description":"Devops Guide to setting up Developer Tools and Environments","headline":"P4-Y 4/24 DevOps for Dev Tools","mainEntityOfPage":{"@type":"WebPage","@id":"https://kcabralomana.github.io/Fastpages/student/2023/04/25/devopshacks.html"},"url":"https://kcabralomana.github.io/Fastpages/student/2023/04/25/devopshacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kcabralomana.github.io/Fastpages/feed.xml" title="Kalani Cabral-Omana" /><link rel="shortcut icon" type="image/x-icon" href="/Fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Fastpages/">Kalani Cabral-Omana</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Fastpages/apisubmenu/">API</a><a class="page-link" href="/Fastpages/javascript/">Java Script</a><a class="page-link" href="/Fastpages/about/">About Me</a><a class="page-link" href="/Fastpages/notes/">Kalani&#39;s CSP notes</a><a class="page-link" href="/Fastpages/search/">Search</a><a class="page-link" href="/Fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">P4-Y 4/24 DevOps for Dev Tools</h1><p class="page-description">Devops Guide to setting up Developer Tools and Environments</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-25T00:00:00-05:00" itemprop="datePublished">
+        Apr 25, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Vardaan, Shaurya, Shivansh, Vyaan, Dhruva, Nicolas, Prasith, Justin</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Fastpages/categories/#student">student</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-25-devopshacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>KASM HACKS</strong>:</p>
+<ol>
+<li>
+<p>In 3-4 sentences, please explain the significance of virtual desktops and KASM. How can virtual desktops such as these be utilized in our AP CSP environment? (0.45)
+Virtual desktops are a technology that allows users to access and use remote computing resources, such as operating systems and applications, from any device with internet access. KASM (Kali Application Streaming Manager) is a specialized virtual desktop environment designed for cybersecurity education, providing a safe and controlled environment for learning and practicing cybersecurity skills, particularly with the Kali Linux operating system. In an AP CSP (Advanced Placement Computer Science Principles) environment, virtual desktops like KASM can be utilized to provide students with hands-on experience in cybersecurity concepts and skills, without the need for expensive hardware or risking damage to real systems. Students can learn and practice cybersecurity techniques in a controlled environment, honing their skills in a safe and secure manner.</p>
+</li>
+<li>
+<p>Attempt to work through the KASM setup with your team. Attach two screenshots to show that you have successfully gone through the setup: The first screenshot of KASM generating your credentials, and the second screenshot of the KASM workspace once you have logged in. (0.45)
+NOT DONE YET!!!</p>
+</li>
+</ol>
+<p><strong>AWS DATABASES HACKS</strong>:</p>
+<ol>
+<li>QUIZ: <a href="https://vardaansinha.github.io/devops/2023/04/23/DifferentAWS.html">https://vardaansinha.github.io/devops/2023/04/23/DifferentAWS.html</a><ol>
+<li>C</li>
+<li>A</li>
+<li>C</li>
+</ol>
+</li>
+<li>QUIZ #2: <a href="https://vardaansinha.github.io/devops/2023/04/02/AWSSQL.html">https://vardaansinha.github.io/devops/2023/04/02/AWSSQL.html</a><ol>
+<li>C</li>
+<li>D</li>
+<li>C</li>
+</ol>
+</li>
+</ol>
+<p><strong>DuckDNS and AWS HACKS</strong>:</p>
+<ol>
+<li>HACK 1: Create a diagram (Canva). What are the pros and cons of using DuckDNS? Show a diagram of an application running on AWS using a DuckDNS system.</li>
+</ol>
+<p>NOT DONE YET!!!</p>
+<ol>
+<li>
+<p>HACK 2: Write a reflection. Why do we use DNS? How does DuckDNS work? What makes DuckDNS unique? How is DuckDNS useful for our projects? What are the steps to setup DuckDNS? 
+DNS is essential for accessing websites using domain names instead of IP addresses. DuckDNS is a free dynamic DNS service that provides a stable domain name for devices with dynamic IP addresses. It's simple to set up and versatile for different projects. DuckDNS can be used for self-hosted services, remote access to home networks, and IoT projects. To set up DuckDNS, sign up for a free account, configure your router to update your IP address with DuckDNS, and test your domain name to ensure it's working correctly. Overall, DuckDNS is a convenient and free option for hosting services from home or accessing devices remotely.</p>
+</li>
+<li>
+<p>HACK 4: In 2-3 complete sentences, talk about any outdated Nginx/Docker functionalities that may need to be addressed or any confusions you may have in regards to the deployment process from Trimesters 1 and 2. 
+It's important to stay updated with the latest versions of Nginx/Docker and to be aware of any deprecated features or changes in the deployment process. It's also helpful to have a clear understanding of the underlying technologies and best practices for configuring and securing your server.</p>
+</li>
+<li>
+<p>HACK 5: Create a Venn Diagram comparing Nginx with Lighttpd.</p>
+</li>
+</ol>
+<p>NOT DONE YET!!!</p>
+<ol>
+<li>HACK 6: Complete the Python quiz and attach your output from the notebook (should be done once you do the quiz.)</li>
+</ol>
+<p>NOT DONE YET!!!</p>
+<p><strong>CERTBOT HACKS</strong>:</p>
+<ol>
+<li>Follow the instructions below and provide a full screenshot of all terminal commands after and including sudo certbot --apache all the way until it asks for the domain you want to secure. At this point you can take a screenshot and cancel the process. If you choose to continue the setup process and get Certbot fully working and show a before and after screenshot of your domain with http amd https connection we will grant extra credit points on hacks, or make up for lost points in other areas.</li>
+</ol>
+<p>NOT DONE YET!!!</p>
+<ol>
+<li>Research and compare the security features of OpenSSL and LibreSSL, and write about the recent vulnerabilities within it. Write about your research in a fastpages blog post. It can be the same post that has your screenshot for the Certbot Hacks.</li>
+</ol>
+<p>OpenSSL and LibreSSL are both open-source cryptographic libraries used to secure network communications. While OpenSSL is more widely used and feature-rich, LibreSSL prioritizes security and maintainability over performance and features [2]. However, despite its aim to increase security, LibreSSL had some vulnerabilities that did not affect OpenSSL, such as CVE-2017-8301 [1]. Both libraries have reported CVEs, but OpenSSL has a longer history of vulnerabilities. C language is still used for cryptographic code due to its advantages in optimization and avoiding timing attacks, but there is a debate about whether it is the best language for all aspects of OpenSSL [2]. It is important to stay updated with the latest versions of Nginx/Docker and to be aware of any deprecated features or changes in the deployment process [2]. Additionally, one should have a clear understanding of the underlying technologies and best practices for configuring and securing the server [2][3].</p>
+<p>References:
+[1] Comparing OpenSSL with LibreSSL
+[2] OpenSSL vs LibreSSL before the 2nd critical is revealed
+[3] LibreSSL: The Secure OpenSSL Alternative - Infosec Resources</p>
+<p><strong>SCORING GUIDELINES</strong>:</p>
+<p>As talked about in class, we'll be looking for effort in the hacks. Though some setups may inevitably not work, we want to see that you took a stab at it and that you understand what the errors you're getting might mean.</p>
+<p>FOR 2/4 SECTIONS OF HACKS COMPLETE: <strong>HIGHEST WILL BE A 3.2/4 POSSIBLE --&gt; 0.8/1</strong></p>
+<p>FOR 3/4 SECTIONS OF HACKS COMPLETE: <strong>HIGHEST WILL BE A 3.6/4 POSSIBLE --&gt; 0.9/1</strong></p>
+<p>FOR 4/4 SECTIONS OF HACKS COMPLETE: <strong>YOU CAN GET UP TO A 4/4 --&gt; 1/1</strong></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="kcabralomana/Fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Fastpages/student/2023/04/25/devopshacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://kcabralomana.github.io/Fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Fastpages/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
