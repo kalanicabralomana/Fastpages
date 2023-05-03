@@ -920,57 +920,57 @@ track #17: the lakes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">books</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">'Harry Potter'</span><span class="p">,</span> <span class="s1">'JK Rowling'</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="s1">'Fiction'</span><span class="p">,</span> <span class="mf">10.99</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">'To Kill a Mockingbird'</span><span class="p">,</span> <span class="s1">'Harper Lee'</span><span class="p">,</span> <span class="mi">1960</span><span class="p">,</span> <span class="s1">'Fiction'</span><span class="p">,</span> <span class="mf">8.99</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">'1984'</span><span class="p">,</span> <span class="s1">'George Orwell'</span><span class="p">,</span> <span class="mi">1949</span><span class="p">,</span> <span class="s1">'Science Fiction'</span><span class="p">,</span> <span class="mf">12.99</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">'The Great Gatsby'</span><span class="p">,</span> <span class="s1">'F. Scott Fitzgerald'</span><span class="p">,</span> <span class="mi">1925</span><span class="p">,</span> <span class="s1">'Fiction'</span><span class="p">,</span> <span class="mf">7.99</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">teams</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">(</span><span class="s1">'Liverpool'</span><span class="p">,</span> <span class="s1">'Premier League'</span><span class="p">,</span> <span class="mi">1892</span><span class="p">,</span> <span class="s1">'Football'</span><span class="p">,</span> <span class="mi">100000000</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">'Golden State Warriors'</span><span class="p">,</span> <span class="s1">'NBA'</span><span class="p">,</span> <span class="mi">1946</span><span class="p">,</span> <span class="s1">'Basketball'</span><span class="p">,</span> <span class="mi">150000000</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">'New York Yankees'</span><span class="p">,</span> <span class="s1">'MLB'</span><span class="p">,</span> <span class="mi">1901</span><span class="p">,</span> <span class="s1">'Baseball'</span><span class="p">,</span> <span class="mi">120000000</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">'Toronto Maple Leafs'</span><span class="p">,</span> <span class="s1">'NHL'</span><span class="p">,</span> <span class="mi">1917</span><span class="p">,</span> <span class="s1">'Ice Hockey'</span><span class="p">,</span> <span class="mi">80000000</span><span class="p">)</span>
 <span class="p">]</span>
 
-<span class="c1"># bubble sort books by price ascending</span>
-<span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">books</span><span class="p">):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">books</span><span class="p">)</span>
+<span class="c1"># bubble sort teams by price ascending</span>
+<span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">]:</span>
-                <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">books</span>
+            <span class="k">if</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="mi">4</span><span class="p">]:</span>
+                <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">teams</span>
 
-<span class="n">sorted_books</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">books</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Books sorted by price:"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">sorted_books</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
-
-<span class="c1"># insertion sort books by year of publication descending</span>
-<span class="k">def</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">books</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">books</span><span class="p">)):</span>
-        <span class="n">key</span> <span class="o">=</span> <span class="n">books</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="n">sorted_teams</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Teams sorted by value:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">sorted_teams</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
+    
+<span class="c1"># insertion sort teams by year of organization descending</span>
+<span class="k">def</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">teams</span><span class="p">)):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="n">teams</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span>
-        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]:</span>
-            <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;=</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
             <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
-    <span class="k">return</span> <span class="n">books</span>
+        <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+    <span class="k">return</span> <span class="n">teams</span>
 
-<span class="n">sorted_books</span> <span class="o">=</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">books</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Books sorted by year of publication:"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">sorted_books</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+<span class="n">sorted_teams</span> <span class="o">=</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Teams sorted by year of establishment:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">sorted_teams</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
 
-<span class="c1"># selection sort books by author name alphabetical</span>
-<span class="k">def</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="n">books</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">books</span><span class="p">)):</span>
+<span class="c1"># selection sort teams by league name alphabetical</span>
+<span class="k">def</span> <span class="nf">selection_sort</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">teams</span><span class="p">)):</span>
         <span class="n">min_index</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">books</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="n">books</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">books</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">teams</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">teams</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">teams</span><span class="p">[</span><span class="n">min_index</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
                 <span class="n">min_index</span> <span class="o">=</span> <span class="n">j</span>
-        <span class="n">books</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">books</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">books</span><span class="p">[</span><span class="n">min_index</span><span class="p">],</span> <span class="n">books</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">books</span>
+        <span class="n">teams</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">teams</span><span class="p">[</span><span class="n">min_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">teams</span><span class="p">[</span><span class="n">min_index</span><span class="p">],</span> <span class="n">teams</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">teams</span>
 
-<span class="n">sorted_books</span> <span class="o">=</span> <span class="n">selection_sort</span><span class="p">(</span><span class="n">books</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Books sorted by author name:"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">sorted_books</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+<span class="n">sorted_teams</span> <span class="o">=</span> <span class="n">selection_sort</span><span class="p">(</span><span class="n">teams</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Teams sorted by team name:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">sorted_teams</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -983,21 +983,21 @@ track #17: the lakes
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Books sorted by price:
-('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction', 7.99)
-('To Kill a Mockingbird', 'Harper Lee', 1960, 'Fiction', 8.99)
-('Harry Potter', 'JK Rowling', 1990, 'Fiction', 10.99)
-('1984', 'George Orwell', 1949, 'Science Fiction', 12.99)
-Books sorted by year of publication:
-('Harry Potter', 'JK Rowling', 1990, 'Fiction', 10.99)
-('To Kill a Mockingbird', 'Harper Lee', 1960, 'Fiction', 8.99)
-('1984', 'George Orwell', 1949, 'Science Fiction', 12.99)
-('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction', 7.99)
-Books sorted by author name:
-('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction', 7.99)
-('1984', 'George Orwell', 1949, 'Science Fiction', 12.99)
-('To Kill a Mockingbird', 'Harper Lee', 1960, 'Fiction', 8.99)
-('Harry Potter', 'JK Rowling', 1990, 'Fiction', 10.99)
+<pre>Teams sorted by value:
+('Toronto Maple Leafs', 'NHL', 1917, 'Ice Hockey', 80000000)
+('Liverpool', 'Premier League', 1892, 'Football', 100000000)
+('New York Yankees', 'MLB', 1901, 'Baseball', 120000000)
+('Golden State Warriors', 'NBA', 1946, 'Basketball', 150000000)
+Teams sorted by year of establishment:
+('Golden State Warriors', 'NBA', 1946, 'Basketball', 150000000)
+('Toronto Maple Leafs', 'NHL', 1917, 'Ice Hockey', 80000000)
+('New York Yankees', 'MLB', 1901, 'Baseball', 120000000)
+('Liverpool', 'Premier League', 1892, 'Football', 100000000)
+Teams sorted by team name:
+('Golden State Warriors', 'NBA', 1946, 'Basketball', 150000000)
+('Liverpool', 'Premier League', 1892, 'Football', 100000000)
+('New York Yankees', 'MLB', 1901, 'Baseball', 120000000)
+('Toronto Maple Leafs', 'NHL', 1917, 'Ice Hockey', 80000000)
 </pre>
 </div>
 </div>
@@ -1026,21 +1026,21 @@ Books sorted by author name:
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="c1"># list of possible weather conditions and probabilities</span>
-<span class="n">weather_prob</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'sunny'</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s1">'cloudy'</span><span class="p">:</span> <span class="mf">0.20</span><span class="p">,</span>  <span class="s1">'foggy'</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span> <span class="s1">'rainy'</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">}</span>
+<span class="c1"># list of possible fruits and probabilities</span>
+<span class="n">fruit_prob</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'apple'</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">'banana'</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">'kiwi'</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">,</span> <span class="s1">'grape'</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">}</span>
 
 <span class="c1"># list for days</span>
 <span class="n">week_days</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Monday'</span><span class="p">,</span> <span class="s1">'Tuesday'</span><span class="p">,</span> <span class="s1">'Wednesday'</span><span class="p">,</span> <span class="s1">'Thursday'</span><span class="p">,</span> <span class="s1">'Friday'</span><span class="p">,</span> <span class="s1">'Saturday'</span><span class="p">,</span> <span class="s1">'Sunday'</span><span class="p">]</span>
 
-<span class="n">week_weather</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">week_fruit</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">week_days</span><span class="p">:</span>
-    <span class="n">weather</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">weather_prob</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="nb">list</span><span class="p">(</span><span class="n">weather_prob</span><span class="o">.</span><span class="n">values</span><span class="p">()))[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">week_weather</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">weather</span><span class="p">)</span>
+    <span class="n">fruit</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">fruit_prob</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="nb">list</span><span class="p">(</span><span class="n">fruit_prob</span><span class="o">.</span><span class="n">values</span><span class="p">()))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">week_fruit</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Weather for the week in San Diego:"</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">day</span><span class="p">,</span> <span class="n">weather</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">week_days</span><span class="p">,</span> <span class="n">week_weather</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">weather</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Fruit of the week available in store:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">day</span><span class="p">,</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">week_days</span><span class="p">,</span> <span class="n">week_fruit</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">fruit</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1053,14 +1053,14 @@ Books sorted by author name:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Weather for the week in San Diego:
-Monday: sunny
-Tuesday: cloudy
-Wednesday: sunny
-Thursday: sunny
-Friday: sunny
-Saturday: sunny
-Sunday: sunny
+<pre>Fruit of the week available in store:
+Monday: orange
+Tuesday: banana
+Wednesday: apple
+Thursday: banana
+Friday: apple
+Saturday: apple
+Sunday: banana
 </pre>
 </div>
 </div>
