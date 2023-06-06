@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      18 min read
     
 </span></p>
 
@@ -274,10 +274,10 @@ window.onload = wrap_img;
 
 
 
-<div id="f36b854a-7c17-4ac6-a2c0-0119e905069d"></div>
+<div id="2b1fdde1-ac88-4d8b-ae13-8f02279c2807"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f36b854a-7c17-4ac6-a2c0-0119e905069d');
+var element = $('#2b1fdde1-ac88-4d8b-ae13-8f02279c2807');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -350,10 +350,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="7d8aaaf1-122c-45fd-933d-6db0ae151729"></div>
+<div id="e50d0121-4d20-4bcf-8ae5-7a7bdfc1de14"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#7d8aaaf1-122c-45fd-933d-6db0ae151729');
+var element = $('#e50d0121-4d20-4bcf-8ae5-7a7bdfc1de14');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -435,10 +435,10 @@ element.text(msg);
 
 
 
-<div id="559041cf-0df0-498e-a57e-f466e95f6713"></div>
+<div id="589a5de6-c3b9-41f8-ab1e-aed5e7b9ad06"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#559041cf-0df0-498e-a57e-f466e95f6713');
+var element = $('#589a5de6-c3b9-41f8-ab1e-aed5e7b9ad06');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -546,10 +546,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="e5e0a68a-2c9e-4aba-97dc-8381c3bb00f5"></div>
+<div id="3728665a-0f5c-4c42-afe8-0bf7729b75a6"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#e5e0a68a-2c9e-4aba-97dc-8381c3bb00f5');
+var element = $('#3728665a-0f5c-4c42-afe8-0bf7729b75a6');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -796,10 +796,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="59837d6a-3bb2-4bf8-88ba-f5bf0199f706"></div>
+<div id="5f33feb6-98e0-4a3a-b542-42277fdba33c"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#59837d6a-3bb2-4bf8-88ba-f5bf0199f706');
+var element = $('#5f33feb6-98e0-4a3a-b542-42277fdba33c');
 console.log("Person objects");
 
 /* class: Person
@@ -1017,10 +1017,10 @@ student.logIt(); // log to console
 
 
 
-<div id="5840e597-3dbe-45c9-9997-d1bf5565ee22"></div>
+<div id="bfbfb68a-6993-4f6e-bcb3-6c74f1d8c293"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#5840e597-3dbe-45c9-9997-d1bf5565ee22');
+var element = $('#bfbfb68a-6993-4f6e-bcb3-6c74f1d8c293');
 console.log("Classroom object");
 
 /* class: Person
@@ -1209,10 +1209,10 @@ $('#jsonText').text(compsci.json);  // posts/embeds/writes compsci.json to HTML 
 
 
 
-<div id="a14d860d-261d-4d50-8ede-17bbb91a706b"></div>
+<div id="f947d3b4-3ec4-4e11-96a5-ef4cde91d5a4"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#a14d860d-261d-4d50-8ede-17bbb91a706b');
+var element = $('#f947d3b4-3ec4-4e11-96a5-ef4cde91d5a4');
 console.log("Classroom Web Page");
 
 // extract JSON text from HTML page
@@ -1517,138 +1517,244 @@ $.ajax(settings).done(function (response) {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-let move_speed = 3, grativy = 0.5;
-let bird = document.querySelector(&#39;.bird&#39;);
-let img = document.getElementById(&#39;bird-1&#39;);
-let sound_point = new Audio(&#39;sounds effect/point.mp3&#39;);
-let sound_die = new Audio(&#39;sounds effect/die.mp3&#39;);
+// Create the game board
+const board = [
+  [&#39;&#39;, &#39;&#39;, &#39;&#39;],
+  [&#39;&#39;, &#39;&#39;, &#39;&#39;],
+  [&#39;&#39;, &#39;&#39;, &#39;&#39;]
+];
 
-// getting bird element properties
-let bird_props = bird.getBoundingClientRect();
+// Player X starts the game
+let currentPlayer = &#39;X&#39;;
 
-// This method returns DOMReact -&gt; top, right, bottom, left, x, y, width and height
-let background = document.querySelector(&#39;.background&#39;).getBoundingClientRect();
+// Function to check if a player has won
+function checkWinner() {
+  // Check rows
+  for (let row = 0; row <span class="p">&lt;</span> <span class="nt">3</span><span class="err">;</span> <span class="na">row</span><span class="err">++)</span> <span class="err">{</span>
+    <span class="na">if</span> <span class="err">(</span>
+      <span class="na">board</span><span class="err">[</span><span class="na">row</span><span class="err">][</span><span class="na">0</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+      <span class="na">board</span><span class="err">[</span><span class="na">row</span><span class="err">][</span><span class="na">1</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+      <span class="na">board</span><span class="err">[</span><span class="na">row</span><span class="err">][</span><span class="na">2</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span>
+    <span class="err">)</span> <span class="err">{</span>
+      <span class="na">return</span> <span class="na">true</span><span class="err">;</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
 
-let score_val = document.querySelector(&#39;.score_val&#39;);
-let message = document.querySelector(&#39;.message&#39;);
-let score_title = document.querySelector(&#39;.score_title&#39;);
+  <span class="err">//</span> <span class="na">Check</span> <span class="na">columns</span>
+  <span class="na">for</span> <span class="err">(</span><span class="na">let</span> <span class="na">col </span><span class="o">=</span> <span class="s">0;</span> <span class="na">col</span> <span class="err">&lt;</span> <span class="na">3</span><span class="err">;</span> <span class="na">col</span><span class="err">++)</span> <span class="err">{</span>
+    <span class="na">if</span> <span class="err">(</span>
+      <span class="na">board</span><span class="err">[</span><span class="na">0</span><span class="err">][</span><span class="na">col</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+      <span class="na">board</span><span class="err">[</span><span class="na">1</span><span class="err">][</span><span class="na">col</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+      <span class="na">board</span><span class="err">[</span><span class="na">2</span><span class="err">][</span><span class="na">col</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span>
+    <span class="err">)</span> <span class="err">{</span>
+      <span class="na">return</span> <span class="na">true</span><span class="err">;</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
 
-let game_state = &#39;Start&#39;;
-img.style.display = &#39;none&#39;;
-message.classList.add(&#39;messageStyle&#39;);
+  <span class="err">//</span> <span class="na">Check</span> <span class="na">diagonals</span>
+  <span class="na">if</span> <span class="err">(</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">0</span><span class="err">][</span><span class="na">0</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">1</span><span class="err">][</span><span class="na">1</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">2</span><span class="err">][</span><span class="na">2</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span>
+  <span class="err">)</span> <span class="err">{</span>
+    <span class="na">return</span> <span class="na">true</span><span class="err">;</span>
+  <span class="err">}</span>
+  <span class="na">if</span> <span class="err">(</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">0</span><span class="err">][</span><span class="na">2</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">1</span><span class="err">][</span><span class="na">1</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span> <span class="err">&amp;&amp;</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">2</span><span class="err">][</span><span class="na">0</span><span class="err">]</span> <span class="err">===</span> <span class="na">currentPlayer</span>
+  <span class="err">)</span> <span class="err">{</span>
+    <span class="na">return</span> <span class="na">true</span><span class="err">;</span>
+  <span class="err">}</span>
 
-document.addEventListener(&#39;keydown&#39;, (e) =&gt; {
-    
-    if(e.key == &#39;Enter&#39; <span class="err">&amp;&amp;</span> game_state != &#39;Play&#39;){
-        document.querySelectorAll(&#39;.pipe_sprite&#39;).forEach((e) =&gt; {
-            e.remove();
-        });
-        img.style.display = &#39;block&#39;;
-        bird.style.top = &#39;40vh&#39;;
-        game_state = &#39;Play&#39;;
-        message.innerHTML = &#39;&#39;;
-        score_title.innerHTML = &#39;Score : &#39;;
-        score_val.innerHTML = &#39;0&#39;;
-        message.classList.remove(&#39;messageStyle&#39;);
-        play();
-    }
-});
+  <span class="na">return</span> <span class="na">false</span><span class="err">;</span>
+<span class="err">}</span>
 
-function play(){
-    function move(){
-        if(game_state != &#39;Play&#39;) return;
+<span class="err">//</span> <span class="na">Function</span> <span class="na">to</span> <span class="na">check</span> <span class="na">if</span> <span class="na">the</span> <span class="na">game</span> <span class="na">is</span> <span class="na">a</span> <span class="na">draw</span>
+<span class="na">function</span> <span class="na">checkDraw</span><span class="err">()</span> <span class="err">{</span>
+  <span class="na">for</span> <span class="err">(</span><span class="na">let</span> <span class="na">row </span><span class="o">=</span> <span class="s">0;</span> <span class="na">row</span> <span class="err">&lt;</span> <span class="na">3</span><span class="err">;</span> <span class="na">row</span><span class="err">++)</span> <span class="err">{</span>
+    <span class="na">for</span> <span class="err">(</span><span class="na">let</span> <span class="na">col </span><span class="o">=</span> <span class="s">0;</span> <span class="na">col</span> <span class="err">&lt;</span> <span class="na">3</span><span class="err">;</span> <span class="na">col</span><span class="err">++)</span> <span class="err">{</span>
+      <span class="na">if</span> <span class="err">(</span><span class="na">board</span><span class="err">[</span><span class="na">row</span><span class="err">][</span><span class="na">col</span><span class="err">]</span> <span class="err">===</span> <span class="err">&#39;&#39;)</span> <span class="err">{</span>
+        <span class="na">return</span> <span class="na">false</span><span class="err">;</span>
+      <span class="err">}</span>
+    <span class="err">}</span>
+  <span class="err">}</span>
+  <span class="na">return</span> <span class="na">true</span><span class="err">;</span>
+<span class="err">}</span>
 
-        let pipe_sprite = document.querySelectorAll(&#39;.pipe_sprite&#39;);
-        pipe_sprite.forEach((element) =&gt; {
-            let pipe_sprite_props = element.getBoundingClientRect();
-            bird_props = bird.getBoundingClientRect();
+<span class="err">//</span> <span class="na">Function</span> <span class="na">to</span> <span class="na">handle</span> <span class="na">a</span> <span class="na">player</span><span class="err">&#39;</span><span class="na">s</span> <span class="na">move</span>
+<span class="na">function</span> <span class="na">makeMove</span><span class="err">(</span><span class="na">row</span><span class="err">,</span> <span class="na">col</span><span class="err">)</span> <span class="err">{</span>
+  <span class="na">if</span> <span class="err">(</span><span class="na">board</span><span class="err">[</span><span class="na">row</span><span class="err">][</span><span class="na">col</span><span class="err">]</span> <span class="err">===</span> <span class="err">&#39;&#39;)</span> <span class="err">{</span>
+    <span class="na">board</span><span class="err">[</span><span class="na">row</span><span class="err">][</span><span class="na">col</span><span class="err">]</span> <span class="err">=</span> <span class="na">currentPlayer</span><span class="err">;</span>
 
-            if(pipe_sprite_props.right <span class="err">&lt;</span>= 0){
-                element.remove();
-            }else{
-                if(bird_props.left <span class="p">&lt;</span> <span class="nt">pipe_sprite_props.left</span> <span class="err">+</span> <span class="na">pipe_sprite_props</span><span class="err">.</span><span class="na">width</span> <span class="err">&amp;&amp;</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">left</span> <span class="err">+</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">width</span> <span class="p">&gt;</span> pipe_sprite_props.left <span class="err">&amp;&amp;</span> bird_props.top <span class="p">&lt;</span> <span class="nt">pipe_sprite_props.top</span> <span class="err">+</span> <span class="na">pipe_sprite_props</span><span class="err">.</span><span class="na">height</span> <span class="err">&amp;&amp;</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">top</span> <span class="err">+</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">height</span> <span class="p">&gt;</span> pipe_sprite_props.top){
-                    game_state = &#39;End&#39;;
-                    message.innerHTML = &#39;Game Over&#39;.fontcolor(&#39;red&#39;) + &#39;<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Press Enter To Restart&#39;;
-                    message.classList.add(&#39;messageStyle&#39;);
-                    img.style.display = &#39;none&#39;;
-                    sound_die.play();
-                    return;
-                }else{
-                    if(pipe_sprite_props.right <span class="p">&lt;</span> <span class="nt">bird_props.left</span> <span class="err">&amp;&amp;</span> <span class="na">pipe_sprite_props</span><span class="err">.</span><span class="na">right</span> <span class="err">+</span> <span class="na">move_speed</span> <span class="p">&gt;</span>= bird_props.left <span class="err">&amp;&amp;</span> element.increase_score == &#39;1&#39;){
-                        score_val.innerHTML =+ score_val.innerHTML + 1;
-                        sound_point.play();
-                    }
-                    element.style.left = pipe_sprite_props.left - move_speed + &#39;px&#39;;
-                }
-            }
-        });
-        requestAnimationFrame(move);
-    }
-    requestAnimationFrame(move);
+    <span class="err">//</span> <span class="na">Check</span> <span class="na">if</span> <span class="na">the</span> <span class="na">current</span> <span class="na">player</span> <span class="na">has</span> <span class="na">won</span>
+    <span class="na">if</span> <span class="err">(</span><span class="na">checkWinner</span><span class="err">())</span> <span class="err">{</span>
+      <span class="na">console</span><span class="err">.</span><span class="na">log</span><span class="err">(&#39;</span><span class="na">Player</span> <span class="err">&#39;</span> <span class="err">+</span> <span class="na">currentPlayer</span> <span class="err">+</span> <span class="err">&#39;</span> <span class="na">wins</span><span class="err">!&#39;);</span>
+      <span class="na">resetGame</span><span class="err">();</span>
+      <span class="na">return</span><span class="err">;</span>
+    <span class="err">}</span>
 
-    let bird_dy = 0;
-    function apply_gravity(){
-        if(game_state != &#39;Play&#39;) return;
-        bird_dy = bird_dy + grativy;
-        document.addEventListener(&#39;keydown&#39;, (e) =&gt; {
-            if(e.key == &#39;ArrowUp&#39; || e.key == &#39; &#39;){
-                img.src = &#39;images/Bird-2.png&#39;;
-                bird_dy = -7.6;
-            }
-        });
+    <span class="err">//</span> <span class="na">Check</span> <span class="na">if</span> <span class="na">the</span> <span class="na">game</span> <span class="na">is</span> <span class="na">a</span> <span class="na">draw</span>
+    <span class="na">if</span> <span class="err">(</span><span class="na">checkDraw</span><span class="err">())</span> <span class="err">{</span>
+      <span class="na">console</span><span class="err">.</span><span class="na">log</span><span class="err">(&#39;</span><span class="na">It</span><span class="err">\&#39;</span><span class="na">s</span> <span class="na">a</span> <span class="na">draw</span><span class="err">!&#39;);</span>
+      <span class="na">resetGame</span><span class="err">();</span>
+      <span class="na">return</span><span class="err">;</span>
+    <span class="err">}</span>
 
-        document.addEventListener(&#39;keyup&#39;, (e) =&gt; {
-            if(e.key == &#39;ArrowUp&#39; || e.key == &#39; &#39;){
-                img.src = &#39;images/Bird.png&#39;;
-            }
-        });
+    <span class="err">//</span> <span class="na">Switch</span> <span class="na">to</span> <span class="na">the</span> <span class="na">other</span> <span class="na">player</span>
+    <span class="na">currentPlayer </span><span class="o">=</span> <span class="s">(currentPlayer</span> <span class="err">===</span> <span class="err">&#39;</span><span class="na">X</span><span class="err">&#39;)</span> <span class="err">?</span> <span class="err">&#39;</span><span class="na">O</span><span class="err">&#39;</span> <span class="na">:</span> <span class="err">&#39;</span><span class="na">X</span><span class="err">&#39;;</span>
+  <span class="err">}</span> <span class="na">else</span> <span class="err">{</span>
+    <span class="na">console</span><span class="err">.</span><span class="na">log</span><span class="err">(&#39;</span><span class="na">Invalid</span> <span class="na">move</span><span class="err">!&#39;);</span>
+  <span class="err">}</span>
+<span class="err">}</span>
 
-        if(bird_props.top <span class="err">&lt;</span>= 0 || bird_props.bottom &gt;= background.bottom){
-            game_state = &#39;End&#39;;
-            message.style.left = &#39;28vw&#39;;
-            window.location.reload();
-            message.classList.remove(&#39;messageStyle&#39;);
-            return;
-        }
-        bird.style.top = bird_props.top + bird_dy + &#39;px&#39;;
-        bird_props = bird.getBoundingClientRect();
-        requestAnimationFrame(apply_gravity);
-    }
-    requestAnimationFrame(apply_gravity);
+<span class="err">//</span> <span class="na">Function</span> <span class="na">to</span> <span class="na">reset</span> <span class="na">the</span> <span class="na">game</span>
+<span class="na">function</span> <span class="na">resetGame</span><span class="err">()</span> <span class="err">{</span>
+  <span class="na">board</span><span class="err">.</span><span class="na">forEach</span><span class="err">((</span><span class="na">row</span><span class="err">,</span> <span class="na">rowIndex</span><span class="err">)</span> <span class="err">=</span><span class="p">&gt;</span> {
+    row.forEach((cell, colIndex) =&gt; {
+      board[rowIndex][colIndex] = &#39;&#39;;
+    });
+  });
 
-    let pipe_seperation = 0;
-
-    let pipe_gap = 35;
-
-    function create_pipe(){
-        if(game_state != &#39;Play&#39;) return;
-
-        if(pipe_seperation &gt; 115){
-            pipe_seperation = 0;
-
-            let pipe_posi = Math.floor(Math.random() * 43) + 8;
-            let pipe_sprite_inv = document.createElement(&#39;div&#39;);
-            pipe_sprite_inv.className = &#39;pipe_sprite&#39;;
-            pipe_sprite_inv.style.top = pipe_posi - 70 + &#39;vh&#39;;
-            pipe_sprite_inv.style.left = &#39;100vw&#39;;
-
-            document.body.appendChild(pipe_sprite_inv);
-            let pipe_sprite = document.createElement(&#39;div&#39;);
-            pipe_sprite.className = &#39;pipe_sprite&#39;;
-            pipe_sprite.style.top = pipe_posi + pipe_gap + &#39;vh&#39;;
-            pipe_sprite.style.left = &#39;100vw&#39;;
-            pipe_sprite.increase_score = &#39;1&#39;;
-
-            document.body.appendChild(pipe_sprite);
-        }
-        pipe_seperation++;
-        requestAnimationFrame(create_pipe);
-    }
-    requestAnimationFrame(create_pipe);
+  currentPlayer = &#39;X&#39;;
 }
+
+// Example usage:
+makeMove(0, 0); // X
+makeMove(0, 1); // O
+makeMove(1, 1); // X
+makeMove(1, 0); // O
+makeMove(2, 2); // X
+makeMove(2, 0); // O
+makeMove(0, 2); // X (Win)
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+// Create the game board
+const board = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+// Player X starts the game
+let currentPlayer = 'X';
+
+// Function to check if a player has won
+function checkWinner() {
+  // Check rows
+  for (let row = 0; row &lt; 3; row++) {
+    if (
+      board[row][0] === currentPlayer &amp;&amp;
+      board[row][1] === currentPlayer &amp;&amp;
+      board[row][2] === currentPlayer
+    ) {
+      return true;
+    }
+  }
+
+  // Check columns
+  for (let col = 0; col &lt; 3; col++) {
+    if (
+      board[0][col] === currentPlayer &amp;&amp;
+      board[1][col] === currentPlayer &amp;&amp;
+      board[2][col] === currentPlayer
+    ) {
+      return true;
+    }
+  }
+
+  // Check diagonals
+  if (
+    board[0][0] === currentPlayer &amp;&amp;
+    board[1][1] === currentPlayer &amp;&amp;
+    board[2][2] === currentPlayer
+  ) {
+    return true;
+  }
+  if (
+    board[0][2] === currentPlayer &amp;&amp;
+    board[1][1] === currentPlayer &amp;&amp;
+    board[2][0] === currentPlayer
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+// Function to check if the game is a draw
+function checkDraw() {
+  for (let row = 0; row &lt; 3; row++) {
+    for (let col = 0; col &lt; 3; col++) {
+      if (board[row][col] === '') {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+// Function to handle a player's move
+function makeMove(row, col) {
+  if (board[row][col] === '') {
+    board[row][col] = currentPlayer;
+
+    // Check if the current player has won
+    if (checkWinner()) {
+      console.log('Player ' + currentPlayer + ' wins!');
+      resetGame();
+      return;
+    }
+
+    // Check if the game is a draw
+    if (checkDraw()) {
+      console.log('It\'s a draw!');
+      resetGame();
+      return;
+    }
+
+    // Switch to the other player
+    currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+  } else {
+    console.log('Invalid move!');
+  }
+}
+
+// Function to reset the game
+function resetGame() {
+  board.forEach((row, rowIndex) =&gt; {
+    row.forEach((cell, colIndex) =&gt; {
+      board[rowIndex][colIndex] = '';
+    });
+  });
+
+  currentPlayer = 'X';
+}
+
+// Example usage:
+makeMove(0, 0); // X
+makeMove(0, 1); // O
+makeMove(1, 1); // X
+makeMove(1, 0); // O
+makeMove(2, 2); // X
+makeMove(2, 0); // O
+makeMove(0, 2); // X (Win)
+
+</div>
+
+</div>
+
 </div>
 </div>
 
