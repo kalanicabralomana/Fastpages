@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      17 min read
     
 </span></p>
 
@@ -274,10 +274,10 @@ window.onload = wrap_img;
 
 
 
-<div id="4fc919b0-ce20-488c-a09f-f6144828e70f"></div>
+<div id="d1b6613e-1c0b-4b87-8e60-14db7f891cc3"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#4fc919b0-ce20-488c-a09f-f6144828e70f');
+var element = $('#d1b6613e-1c0b-4b87-8e60-14db7f891cc3');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -350,10 +350,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="563005f5-2f67-4555-97e6-d4a7386ce559"></div>
+<div id="129e259d-0e51-4b4d-9224-7a01ceee8640"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#563005f5-2f67-4555-97e6-d4a7386ce559');
+var element = $('#129e259d-0e51-4b4d-9224-7a01ceee8640');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -435,10 +435,10 @@ element.text(msg);
 
 
 
-<div id="6cb4a71b-1e4b-4965-8dc3-1c6ae144dc92"></div>
+<div id="b63e64b8-6aab-4351-9c27-232d50132061"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#6cb4a71b-1e4b-4965-8dc3-1c6ae144dc92');
+var element = $('#b63e64b8-6aab-4351-9c27-232d50132061');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -546,10 +546,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="86bb5a86-e977-4af1-910e-8bf0194f898d"></div>
+<div id="edd1cd3f-741a-40a0-ae94-367be3709b19"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#86bb5a86-e977-4af1-910e-8bf0194f898d');
+var element = $('#edd1cd3f-741a-40a0-ae94-367be3709b19');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -796,10 +796,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="ae2fee81-fa81-4b87-a74d-4fe0ebf88a2f"></div>
+<div id="8643643c-7d81-4e04-90fc-de5690d9c935"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#ae2fee81-fa81-4b87-a74d-4fe0ebf88a2f');
+var element = $('#8643643c-7d81-4e04-90fc-de5690d9c935');
 console.log("Person objects");
 
 /* class: Person
@@ -1017,10 +1017,10 @@ student.logIt(); // log to console
 
 
 
-<div id="84cf0d60-4dcb-4190-9efa-d0afd861f781"></div>
+<div id="ffbe9be6-484f-4cb9-b72f-54b9f90a4354"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#84cf0d60-4dcb-4190-9efa-d0afd861f781');
+var element = $('#ffbe9be6-484f-4cb9-b72f-54b9f90a4354');
 console.log("Classroom object");
 
 /* class: Person
@@ -1209,10 +1209,10 @@ $('#jsonText').text(compsci.json);  // posts/embeds/writes compsci.json to HTML 
 
 
 
-<div id="af47dacd-0184-4753-8a98-ff421261bfaf"></div>
+<div id="b61a3bc8-60d6-40e1-82be-ac9d05ee318a"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#af47dacd-0184-4753-8a98-ff421261bfaf');
+var element = $('#b61a3bc8-60d6-40e1-82be-ac9d05ee318a');
 console.log("Classroom Web Page");
 
 // extract JSON text from HTML page
@@ -1503,6 +1503,152 @@ $.ajax(settings).done(function (response) {
 
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+let move_speed = 3, grativy = 0.5;
+let bird = document.querySelector(&#39;.bird&#39;);
+let img = document.getElementById(&#39;bird-1&#39;);
+let sound_point = new Audio(&#39;sounds effect/point.mp3&#39;);
+let sound_die = new Audio(&#39;sounds effect/die.mp3&#39;);
+
+// getting bird element properties
+let bird_props = bird.getBoundingClientRect();
+
+// This method returns DOMReact -&gt; top, right, bottom, left, x, y, width and height
+let background = document.querySelector(&#39;.background&#39;).getBoundingClientRect();
+
+let score_val = document.querySelector(&#39;.score_val&#39;);
+let message = document.querySelector(&#39;.message&#39;);
+let score_title = document.querySelector(&#39;.score_title&#39;);
+
+let game_state = &#39;Start&#39;;
+img.style.display = &#39;none&#39;;
+message.classList.add(&#39;messageStyle&#39;);
+
+document.addEventListener(&#39;keydown&#39;, (e) =&gt; {
+    
+    if(e.key == &#39;Enter&#39; <span class="err">&amp;&amp;</span> game_state != &#39;Play&#39;){
+        document.querySelectorAll(&#39;.pipe_sprite&#39;).forEach((e) =&gt; {
+            e.remove();
+        });
+        img.style.display = &#39;block&#39;;
+        bird.style.top = &#39;40vh&#39;;
+        game_state = &#39;Play&#39;;
+        message.innerHTML = &#39;&#39;;
+        score_title.innerHTML = &#39;Score : &#39;;
+        score_val.innerHTML = &#39;0&#39;;
+        message.classList.remove(&#39;messageStyle&#39;);
+        play();
+    }
+});
+
+function play(){
+    function move(){
+        if(game_state != &#39;Play&#39;) return;
+
+        let pipe_sprite = document.querySelectorAll(&#39;.pipe_sprite&#39;);
+        pipe_sprite.forEach((element) =&gt; {
+            let pipe_sprite_props = element.getBoundingClientRect();
+            bird_props = bird.getBoundingClientRect();
+
+            if(pipe_sprite_props.right <span class="err">&lt;</span>= 0){
+                element.remove();
+            }else{
+                if(bird_props.left <span class="p">&lt;</span> <span class="nt">pipe_sprite_props.left</span> <span class="err">+</span> <span class="na">pipe_sprite_props</span><span class="err">.</span><span class="na">width</span> <span class="err">&amp;&amp;</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">left</span> <span class="err">+</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">width</span> <span class="p">&gt;</span> pipe_sprite_props.left <span class="err">&amp;&amp;</span> bird_props.top <span class="p">&lt;</span> <span class="nt">pipe_sprite_props.top</span> <span class="err">+</span> <span class="na">pipe_sprite_props</span><span class="err">.</span><span class="na">height</span> <span class="err">&amp;&amp;</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">top</span> <span class="err">+</span> <span class="na">bird_props</span><span class="err">.</span><span class="na">height</span> <span class="p">&gt;</span> pipe_sprite_props.top){
+                    game_state = &#39;End&#39;;
+                    message.innerHTML = &#39;Game Over&#39;.fontcolor(&#39;red&#39;) + &#39;<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>Press Enter To Restart&#39;;
+                    message.classList.add(&#39;messageStyle&#39;);
+                    img.style.display = &#39;none&#39;;
+                    sound_die.play();
+                    return;
+                }else{
+                    if(pipe_sprite_props.right <span class="p">&lt;</span> <span class="nt">bird_props.left</span> <span class="err">&amp;&amp;</span> <span class="na">pipe_sprite_props</span><span class="err">.</span><span class="na">right</span> <span class="err">+</span> <span class="na">move_speed</span> <span class="p">&gt;</span>= bird_props.left <span class="err">&amp;&amp;</span> element.increase_score == &#39;1&#39;){
+                        score_val.innerHTML =+ score_val.innerHTML + 1;
+                        sound_point.play();
+                    }
+                    element.style.left = pipe_sprite_props.left - move_speed + &#39;px&#39;;
+                }
+            }
+        });
+        requestAnimationFrame(move);
+    }
+    requestAnimationFrame(move);
+
+    let bird_dy = 0;
+    function apply_gravity(){
+        if(game_state != &#39;Play&#39;) return;
+        bird_dy = bird_dy + grativy;
+        document.addEventListener(&#39;keydown&#39;, (e) =&gt; {
+            if(e.key == &#39;ArrowUp&#39; || e.key == &#39; &#39;){
+                img.src = &#39;images/Bird-2.png&#39;;
+                bird_dy = -7.6;
+            }
+        });
+
+        document.addEventListener(&#39;keyup&#39;, (e) =&gt; {
+            if(e.key == &#39;ArrowUp&#39; || e.key == &#39; &#39;){
+                img.src = &#39;images/Bird.png&#39;;
+            }
+        });
+
+        if(bird_props.top <span class="err">&lt;</span>= 0 || bird_props.bottom &gt;= background.bottom){
+            game_state = &#39;End&#39;;
+            message.style.left = &#39;28vw&#39;;
+            window.location.reload();
+            message.classList.remove(&#39;messageStyle&#39;);
+            return;
+        }
+        bird.style.top = bird_props.top + bird_dy + &#39;px&#39;;
+        bird_props = bird.getBoundingClientRect();
+        requestAnimationFrame(apply_gravity);
+    }
+    requestAnimationFrame(apply_gravity);
+
+    let pipe_seperation = 0;
+
+    let pipe_gap = 35;
+
+    function create_pipe(){
+        if(game_state != &#39;Play&#39;) return;
+
+        if(pipe_seperation &gt; 115){
+            pipe_seperation = 0;
+
+            let pipe_posi = Math.floor(Math.random() * 43) + 8;
+            let pipe_sprite_inv = document.createElement(&#39;div&#39;);
+            pipe_sprite_inv.className = &#39;pipe_sprite&#39;;
+            pipe_sprite_inv.style.top = pipe_posi - 70 + &#39;vh&#39;;
+            pipe_sprite_inv.style.left = &#39;100vw&#39;;
+
+            document.body.appendChild(pipe_sprite_inv);
+            let pipe_sprite = document.createElement(&#39;div&#39;);
+            pipe_sprite.className = &#39;pipe_sprite&#39;;
+            pipe_sprite.style.top = pipe_posi + pipe_gap + &#39;vh&#39;;
+            pipe_sprite.style.left = &#39;100vw&#39;;
+            pipe_sprite.increase_score = &#39;1&#39;;
+
+            document.body.appendChild(pipe_sprite);
+        }
+        pipe_seperation++;
+        requestAnimationFrame(create_pipe);
+    }
+    requestAnimationFrame(create_pipe);
+}
+</pre></div>
+
+    </div>
 </div>
 </div>
 
