@@ -274,10 +274,10 @@ window.onload = wrap_img;
 
 
 
-<div id="da0de2ad-5708-423f-80fa-19940d8191c1"></div>
+<div id="aacfeb89-935f-4b36-abad-d07af1aefc76"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#da0de2ad-5708-423f-80fa-19940d8191c1');
+var element = $('#aacfeb89-935f-4b36-abad-d07af1aefc76');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -350,10 +350,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="10bd7707-1319-45c9-9669-a97b76e130ad"></div>
+<div id="fce5c2d7-2bd8-4ad0-ac15-54e368267aab"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#10bd7707-1319-45c9-9669-a97b76e130ad');
+var element = $('#fce5c2d7-2bd8-4ad0-ac15-54e368267aab');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -435,10 +435,10 @@ element.text(msg);
 
 
 
-<div id="b8e3304e-07dd-49f6-99df-6b100a54e0ac"></div>
+<div id="3bc6aaea-34b5-4a8c-b5a2-278991a8d596"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#b8e3304e-07dd-49f6-99df-6b100a54e0ac');
+var element = $('#3bc6aaea-34b5-4a8c-b5a2-278991a8d596');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -546,10 +546,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="6d610dde-48e1-4515-8564-4610140f3375"></div>
+<div id="ecf4b0fe-e3f3-414a-8bc5-c7c8650c58a8"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#6d610dde-48e1-4515-8564-4610140f3375');
+var element = $('#ecf4b0fe-e3f3-414a-8bc5-c7c8650c58a8');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -796,10 +796,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="b36d1754-ed07-469c-8e89-93ce0491911c"></div>
+<div id="36e4eba8-cc2b-450e-865d-1b299ba3c18d"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#b36d1754-ed07-469c-8e89-93ce0491911c');
+var element = $('#36e4eba8-cc2b-450e-865d-1b299ba3c18d');
 console.log("Person objects");
 
 /* class: Person
@@ -1017,10 +1017,10 @@ student.logIt(); // log to console
 
 
 
-<div id="a7c66e72-be21-40c6-8d67-ace94b71d96f"></div>
+<div id="a3841667-8692-4408-86d2-f5be3c66747c"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#a7c66e72-be21-40c6-8d67-ace94b71d96f');
+var element = $('#a3841667-8692-4408-86d2-f5be3c66747c');
 console.log("Classroom object");
 
 /* class: Person
@@ -1209,10 +1209,10 @@ $('#jsonText').text(compsci.json);  // posts/embeds/writes compsci.json to HTML 
 
 
 
-<div id="86729f96-ffd0-4114-b3f9-340ae0d846c5"></div>
+<div id="dcc64e55-4917-4566-87ca-62570eeb792a"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#86729f96-ffd0-4114-b3f9-340ae0d846c5');
+var element = $('#dcc64e55-4917-4566-87ca-62570eeb792a');
 console.log("Classroom Web Page");
 
 // extract JSON text from HTML page
@@ -1428,6 +1428,51 @@ for (var row of classroom) {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<html>
+<head>
+  <title>Bubble Sort</title>
+  <script>
+    function bubbleSort() {
+      var numbers = [4, 2, 9, 3]; // Array to be sorted
+      var output = document.getElementById("output");
+
+      var n = numbers.length;
+
+      for (var i = 0; i < n - 1; i++) {
+        for (var j = 0; j < n - i - 1; j++) {
+          if (numbers[j] > numbers[j + 1]) {
+            var temp = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = temp;
+          }
+        }
+      }
+
+      output.innerHTML = "Sorted List: " + numbers.join(", ");
+    }
+  </script>
+</head>
+<body>
+  <h2>Bubble Sort</h2>
+  <button onclick="bubbleSorst()">Sort</button><br /><br />
+  <div id="output"></div>
+</body>
+</html>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
